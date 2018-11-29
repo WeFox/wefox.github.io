@@ -20,7 +20,7 @@ Hugo是使用 Go 语言开发的开源静态网站生成工具，相对于Hexo�
     sudo apt install -f'>
 <meta name='theme-color' content='#ffcd00'>
 
-<meta property='og:title' content='Create_blog_on_github_by_hugo • WeFox'>
+<meta property='og:title' content='在Ubuntu上用Hugo和Github创建个人博客 • WeFox'>
 <meta property='og:description' content='前言
 
 Hugo是使用 Go 语言开发的开源静态网站生成工具，相对于Hexo，速度快是 Hugo 的一大特点，在本地修改后，它会自动渲染。
@@ -43,7 +43,7 @@ Hugo是使用 Go 语言开发的开源静态网站生成工具，相对于Hexo�
 
 <meta name="generator" content="Hugo 0.52" />
 
-  <title>Create_blog_on_github_by_hugo • WeFox</title>
+  <title>在Ubuntu上用Hugo和Github创建个人博客 • WeFox</title>
   <link rel='canonical' href='http://blog.wefox.me/post/create_blog_on_github_by_hugo/'>
   
   
@@ -136,7 +136,7 @@ Hugo是使用 Go 语言开发的开源静态网站生成工具，相对于Hexo�
     <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
   <section class='widget widget-breadcrumbs sep-after'>
     <nav id='breadcrumbs'>
-      <ol><li><a href='/'>WeFox</a></li><li><a href='/post/'>Posts</a></li><li><span>Create_blog_on_github_by_hugo</span></li></ol>
+      <ol><li><a href='/'>WeFox</a></li><li><a href='/post/'>Posts</a></li><li><span>在Ubuntu上用Hugo和Github创建个人博客</span></li></ol>
     </nav>
   </section></div>
       </div>
@@ -155,7 +155,7 @@ Hugo是使用 Go 语言开发的开源静态网站生成工具，相对于Hexo�
   <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'>Create_blog_on_github_by_hugo</h1>
+      <h1 class='title'>在Ubuntu上用Hugo和Github创建个人博客</h1>
       
 
     </div>
@@ -235,18 +235,22 @@ e>
 <h2 id="在github上部署">在Github上部署</h2>
 
 <p>###配置信息并关联ssh
-首先，先配置Github账号信息
+首先，先配置Github账号信息<br />
+    <code>
     git config –global user.name “your_name”
-    git config –global user.email “your_email@youremail.com”</p>
+</code><br />
+    <code>
+    git config –global user.email “your_email@youremail.com”
+</code></p>
 
-<p>然后生成 SSH key 与 github 联系
-    ssh-keygen -t rsa -C “your_email@youremail.com”</p>
+<p>然后生成 SSH key 与 github 联系<br />
+    <code>ssh-keygen -t rsa -C “your_email@youremail.com”</code></p>
 
 <p>your_email@youremail.com 改为你的邮箱，之后会要求确认路径和输入密码，我们这使用默认的一路回车就行。成功的话会在根目录下生成<code>.ssh</code>文件夹，进去这个文件夹，打开<code>id_rsa.pub</code>，复制里面的内容。
-然后登录<a href="www.github.com" target="_blank">github</a>，如果没有就注册一个账号，登录后右上角 头像 -&gt; Settings —&gt; SSH nd GPG keys —&gt; New SSH key。把公钥(id_rsa.pub)粘贴到 key 中，填好 title 并点击 Add SSH key</p>
+然后登录<a href="www.github.com" target="_blank">github</a>，如果没有就注册一个账号，登录后右上角 <code>头像 -&gt; Settings —&gt; SSH nd GPG keys —&gt; New SSH key</code>。把公钥(id_rsa.pub)粘贴到 key 中，填好 title 并点击 Add SSH key</p>
 
-<p>关联完之后可以在终端输入
-    ssh git@github.com</p>
+<p>关联完之后可以在终端输入<br />
+    <code>ssh git@github.com</code></p>
 
 <p>显示如下界面<br />
 <img src="https://raw.githubusercontent.com/Wefox/wefox.github.io/master/post/img/create_blog_1.png" alt="Img" />
@@ -349,7 +353,7 @@ git pull    // or git pull origin master
         <span class='screen-reader-text'>Previous post: </span>在Ubuntu和Mac OS X上安装Fish</a>
     </div><div class='next-entry sep-before'>
       <a href='/post/ssh_login_github_problems/'>
-        <span class='screen-reader-text'>Next post: </span>Ssh_login_github_problems<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+        <span class='screen-reader-text'>Next post: </span>Ssh Login Github Problems<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="4" y1="12" x2="20" y2="12"/>
   <polyline points="14 6 20 12 14 18"/>
