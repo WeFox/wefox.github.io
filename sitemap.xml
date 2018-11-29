@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://blog.wefox.me/post/ssh_login_github_problems/</loc>
+    <lastmod>2018-11-29T17:33:19+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://blog.wefox.me/post/create_blog_on_github_by_hugo/</loc>
     <lastmod>2018-11-29T16:20:02+08:00</lastmod>
   </url>
@@ -24,7 +29,7 @@
   
   <url>
     <loc>http://blog.wefox.me/post/</loc>
-    <lastmod>2018-11-29T16:20:02+08:00</lastmod>
+    <lastmod>2018-11-29T17:33:19+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -40,7 +45,7 @@
   
   <url>
     <loc>http://blog.wefox.me/</loc>
-    <lastmod>2018-11-29T16:20:02+08:00</lastmod>
+    <lastmod>2018-11-29T17:33:19+08:00</lastmod>
     <priority>0</priority>
   </url>
   

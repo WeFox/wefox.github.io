@@ -5,10 +5,19 @@
     <link>http://blog.wefox.me/</link>
     <description>Recent content on WeFox</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 29 Nov 2018 16:20:02 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 29 Nov 2018 17:33:19 +0800</lastBuildDate>
     
 	<atom:link href="http://blog.wefox.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ssh_login_github_problems</title>
+      <link>http://blog.wefox.me/post/ssh_login_github_problems/</link>
+      <pubDate>Thu, 29 Nov 2018 17:33:19 +0800</pubDate>
+      
+      <guid>http://blog.wefox.me/post/ssh_login_github_problems/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Create_blog_on_github_by_hugo</title>
