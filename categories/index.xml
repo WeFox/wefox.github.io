@@ -9,5 +9,23 @@
 	<atom:link href="http://blog.wefox.me/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Computer Skill</title>
+      <link>http://blog.wefox.me/categories/computer-skill/</link>
+      <pubDate>Thu, 29 Nov 2018 16:20:02 +0800</pubDate>
+      
+      <guid>http://blog.wefox.me/categories/computer-skill/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>System</title>
+      <link>http://blog.wefox.me/categories/system/</link>
+      <pubDate>Wed, 28 Nov 2018 17:44:12 +0800</pubDate>
+      
+      <guid>http://blog.wefox.me/categories/system/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

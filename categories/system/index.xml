@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>System on WeFox</title>
+    <link>http://blog.wefox.me/categories/system/</link>
+    <description>Recent content in System on WeFox</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 28 Nov 2018 17:44:12 +0800</lastBuildDate>
+    
+	<atom:link href="http://blog.wefox.me/categories/system/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>在Ubuntu和Mac OS X上安装Fish</title>
+      <link>http://blog.wefox.me/post/install_fish_on_ubuntu_and_osx/</link>
+      <pubDate>Wed, 28 Nov 2018 17:44:12 +0800</pubDate>
+      
+      <guid>http://blog.wefox.me/post/install_fish_on_ubuntu_and_osx/</guid>
+      <description>最近接触了Fish这个shell，总体感觉还不错，所以花了点时间在Ubuntu和OS X上都配置了一下。
+环境： Ubuntu 18.04 LTS
+OS X 10.11
+Ubuntu 在ubuntu上，最简单的安装方法是通过最新的官方的PPA安装，具体如下：
+通过PPA安装Fish 通过下面几步来安装Fish 2.x：
+sudo apt-add-repository ppa:fish-shell/release-2 sudo apt-get update sudo apt-get install fish  安装好之后将Fish设置为默认的shell，这样每次打开终端的时候就会默认使用Fish：
+chsh -s /usr/bin/fish  现在Fish就装好了，通过在终端里输入fish就可以看到效果啦！
+给Fish安装主题 Fish有一个叫做“Oh My Fish”的框架，可以为Fish安装主题和Packages，要安装”Oh My Fish”，首先，请确保Ubuntu中已经安装了Ruby，如果还没安装，可以通过这条命令安装：
+sudo apt-get install ruby  接着通过下面这条命令就可以轻松安装了：
+curl -L http://get.oh-my.fish | fish omf help  关于”Oh My Fish”的使用，后面会细说。当然还有其他的方法可以安装Fish，例如有.deb的package来安装等等，这里就不一一列举了。
+Mac OS X 用Homebrew安装Fish 如果你已经在使用Homebrew了，可以直接安装：
+brew install fish  安装”Oh My Fish” 可以直接在终端里输入：
+curl -L http://get.</description>
+    </item>
+    
+  </channel>
+</rss>
