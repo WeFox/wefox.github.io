@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://blog.wefox.me/post/create_blog_on_github_by_hugo/</loc>
+    <lastmod>2018-11-29T16:20:02+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.wefox.me/post/install_fish_on_ubuntu_and_osx/</loc>
+    <lastmod>2018-11-28T17:44:12+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.wefox.me/authors/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.wefox.me/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.wefox.me/post/</loc>
+    <lastmod>2018-11-29T16:20:02+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.wefox.me/series/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.wefox.me/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.wefox.me/</loc>
+    <lastmod>2018-11-29T16:20:02+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
