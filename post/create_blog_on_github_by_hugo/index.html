@@ -265,14 +265,15 @@ e>
 
 <h3 id="托管">托管</h3>
 
-<p>如果到这一步都顺利的话，我们可以先删除<code>public</code>文件夹(如果有这个文件夹的话)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rm -fr public/```" data-lang="rm -fr public/```">然后把<span style="color:#e6db74">```</span>public/<span style="color:#e6db74">```</span>目录添加为<span style="color:#e6db74">```</span>submodule<span style="color:#e6db74">```</span>  
-<span style="color:#e6db74">```</span>git init git submodule add git@github.com:XXX/xxx.github.io public<span style="color:#e6db74">```</span>
+<p>如果到这一步都顺利的话，我们可以先删除<code>public</code>文件夹(如果有这个文件夹的话)<br />
+    <code>rm -fr public/</code></p>
 
-添加<span style="color:#e6db74">```</span>.gitignore<span style="color:#e6db74">```</span>文件，文件中写<span style="color:#e6db74">```</span>public/<span style="color:#e6db74">```</span>，在同步<span style="color:#e6db74">```</span>my-blog<span style="color:#e6db74">```</span>时会忽略<span style="color:#e6db74">```</span>public<span style="color:#e6db74">```</span>文件夹
-接下来的工作可以借助一个<span style="color:#e6db74">```</span>deploy.sh<span style="color:#e6db74">```</span>脚本来完成<span style="color:#e6db74">```</span>public/<span style="color:#e6db74">```</span>文件夹<span style="color:#f92672">(</span>也就是xxx.github.io仓库<span style="color:#f92672">)</span>的托管
-<span style="color:#e6db74">```</span>sh
-<span style="color:#75715e">#!/bin/bash
+<p>然后把<code>public/</code>目录添加为<code>submodule</code><br />
+    <code>git init git submodule add git@github.com:XXX/xxx.github.io public</code></p>
+
+<p>添加<code>.gitignore</code>文件，文件中写<code>public/</code>，在同步<code>my-blog</code>时会忽略<code>public</code>文件夹
+接下来的工作可以借助一个<code>deploy.sh</code>脚本来完成<code>public/</code>文件夹(也就是xxx.github.io仓库)的托管</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 echo -e <span style="color:#e6db74">&#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34;</span>
 
