@@ -248,7 +248,9 @@ e>
 <p>关联完之后可以在终端输入
     ssh git@github.com</p>
 
-<p>显示如下界面<img src="https://github.com/WeFox/wefox.github.io/blob/master/post/img/create_blog_1.png" alt="" />代表关联成功。</p>
+<p>显示如下界面<br />
+<img src="https://raw.githubusercontent.com/Wefox/wefox.github.io/master/post/img/create_blog_1.png" alt="Img" />
+代表关联成功。</p>
 
 <h3 id="推送到-github-上">推送到 GitHub 上</h3>
 
@@ -304,17 +306,21 @@ chmod +x deploy.sh
 ./deploy.sh &quot;Your optional commit message&quot;
 </code></pre>
 
-<p>然后把 <code>blog</code> 里的内容同步到 GitHub 上。同时要在data、layouts、static等空文件夹里面新建一个空的.gitkeep文件，以保持目录结构(因为空文件夹不会被托管)。记住一定要删掉你的主题目录里面的.git文件夹<br />
-    git remote add origin git@github.com:github_user_name/your_repository   // your_repository 即你存放你的博客源文件的仓库(也就是xxx.github.io)
-    git pull origin master
-    git add .
-    git commit -m &ldquo;the message you want to write&rdquo;
-    git push -u origin master    // 第二次 push 可以不用加 -u</p>
+<p>然后把 <code>blog</code> 里的内容同步到 GitHub 上。同时要在data、layouts、static等空文件夹里面新建一个空的.gitkeep文件，以保持目录结构(因为空文件夹不会被托管)。记住一定要删掉你的主题目录里面的.git文件夹</p>
 
-<p>到这里就大功告成了，如果你要在另一台电脑上继续写博客，只要把<code>blog</code>克隆下来，然后把里面“看得见”的东西拷贝到一个新的文件夹(即除了.git、.gitmodule等)，然后再重复刚才创建 git 子模块的那些步骤，当然你要准备Hugo环境。如果你想获取你的主题的最新更新，则在你的主题根目录下运行如下命令：
-    git init
-    git remote add origin <a href="https://github.com/author_name/your_theme_repo_name.git" target="_blank">https://github.com/author_name/your_theme_repo_name.git</a>
-    git pull    // or git pull origin master</p>
+<pre><code>git remote add origin git@github.com:github_user_name/your_repository   // your_repository 即你存放你的博客源文件的仓库(也就是xxx.github.io)
+git pull origin master
+git add .
+git commit -m &quot;the message you want to write&quot;
+git push -u origin master    // 第二次 push 可以不用加 -u
+</code></pre>
+
+<p>到这里就大功告成了，如果你要在另一台电脑上继续写博客，只要把<code>blog</code>克隆下来，然后把里面“看得见”的东西拷贝到一个新的文件夹(即除了.git、.gitmodule等)，然后再重复刚才创建 git 子模块的那些步骤，当然你要准备Hugo环境。如果你想获取你的主题的最新更新，则在你的主题根目录下运行如下命令：</p>
+
+<pre><code>git init
+git remote add origin https://github.com/author_name/your_theme_repo_name.git
+git pull    // or git pull origin master
+</code></pre>
 
 <h3 id="reference">Reference</h3>
 
