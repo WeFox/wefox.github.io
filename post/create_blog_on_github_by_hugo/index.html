@@ -248,7 +248,7 @@ e>
 <p>关联完之后可以在终端输入
     ssh git@github.com</p>
 
-<p>显示如下界面<img src="https://github.com/Wefox/wefox.github.io/master/post/img/create_blog_1.png" alt="" />代表关联成功。</p>
+<p>显示如下界面<img src="https://github.com/WeFox/wefox.github.io/blob/master/post/img/create_blog_1.png" alt="" />代表关联成功。</p>
 
 <h3 id="推送到-github-上">推送到 GitHub 上</h3>
 
@@ -296,13 +296,15 @@ git push origin master
 
 <span style="color:#75715e"># Come Back up to the Project Root</span>
 cd ..</code></pre></div>
-<p>把以上命令保存为.sh文件，然后再运行以下命令
-    # 运行以下命令更改 deploy.sh 的权限
-    chmod +x deploy.sh
-    # 运行以下命令完成 push 整个博客的操作
-    ./deploy.sh &ldquo;Your optional commit message&rdquo;</p>
+<p>把以上命令保存为.sh文件，然后再运行以下命令</p>
 
-<p>然后把 <code>blog</code> 里的内容同步到 GitHub 上。同时要在data、layouts、static等空文件夹里面新建一个空的.gitkeep文件，以保持目录结构(因为空文件夹不会被托管)。记住一定要删掉你的主题目录里面的.git文件夹
+<pre><code># 运行以下命令更改 deploy.sh 的权限
+chmod +x deploy.sh
+# 运行以下命令完成 push 整个博客的操作
+./deploy.sh &quot;Your optional commit message&quot;
+</code></pre>
+
+<p>然后把 <code>blog</code> 里的内容同步到 GitHub 上。同时要在data、layouts、static等空文件夹里面新建一个空的.gitkeep文件，以保持目录结构(因为空文件夹不会被托管)。记住一定要删掉你的主题目录里面的.git文件夹<br />
     git remote add origin git@github.com:github_user_name/your_repository   // your_repository 即你存放你的博客源文件的仓库(也就是xxx.github.io)
     git pull origin master
     git add .
