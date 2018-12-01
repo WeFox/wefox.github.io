@@ -16,22 +16,17 @@
       <pubDate>Thu, 29 Nov 2018 16:20:02 +0800</pubDate>
       
       <guid>http://blog.wefox.me/post/create_blog_on_github_by_hugo/</guid>
-      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-
-&lt;p&gt;Hugo是使用 Go 语言开发的开源静态网站生成工具，相对于Hexo，速度快是 Hugo 的一大特点，在本地修改后，它会自动渲染。&lt;/p&gt;
-
-&lt;h2 id=&#34;安装hugo&#34;&gt;安装Hugo&lt;/h2&gt;
-
-&lt;p&gt;虽然在Ubunut上可以通过
-    sudo apt install hugo&lt;/p&gt;
-
-&lt;p&gt;来安装，但是，强烈不推荐这样做，因为安装的版本太低，在build的时候（例如安装主题的时候）会提示很多错误。&lt;/p&gt;
-
-&lt;p&gt;推荐到&lt;a href=&#34;https://github.com/gohugoio/hugo/releases&#34; target=&#34;_blank&#34;&gt;hugo官网下载&lt;/a&gt;下载符合系统的最新版本，这里我们下载hugo_xxx_Linux-64bit.deb&lt;/p&gt;
-
-&lt;p&gt;下载好之后进入下载的目录(xxx代表版本号，请自行替换)
-    sudo dpkg -i hugo_xxx_Linux-64bit.deb
-    sudo apt install -f&lt;/p&gt;</description>
+      <description>前言 Hugo是使用 Go 语言开发的开源静态网站生成工具，相对于Hexo，速度快是 Hugo 的一大特点，在本地修改后，它会自动渲染。
+安装Hugo 虽然在Ubunut上可以通过sudo apt install hugo来安装，但是，强烈不推荐这样做，因为安装的版本太低，在build的时候（例如安装主题的时候）会提示很多错误。
+推荐到hugo官网下载下载符合系统的最新版本，这里我们下载hugo_xxx_Linux-64bit.deb
+下载好之后进入下载的目录(xxx代表版本号，请自行替换)
+sudo dpkg -i hugo_xxx_Linux-64bit.deb sudo apt install -f  创建博客 hugo new site blog //blog就是生成blog之后存放的文件夹  hugo会自动创建blog文件夹并生成需要的文件
+安装主题 到hugo官网上可以找到很多主题，通过Demo可以预览主题，每种主题的安装方式都会有说明，自行按需安装即可。
+安装完主题之后需在blog根目录下配置 config.toml，每个主题配置不同，这里就不一一说明了，具体可以查相关主题的配置文档。
+生成博客 直接运行 hugo server -D 就会生成博客，可以在http://localhost:1313 中查看效果
+在Github上部署 ###配置信息并关联ssh 首先，先配置Github账号信息
+git config –global user.name “your_name” git config –global user.email “your_email@youremail.com”  然后生成 SSH key 与 github 联系
+ssh-keygen -t rsa -C “your_email@youremail.com”  your_email@youremail.com 改为你的邮箱，之后会要求确认路径和输入密码，我们这使用默认的一路回车就行。成功的话会在根目录下生成.ssh文件夹，进去这个文件夹，打开id_rsa.pub，复制里面的内容。 然后登录github，如果没有就注册一个账号，登录后右上角 头像 -&amp;gt; Settings —&amp;gt; SSH nd GPG keys —&amp;gt; New SSH key。把公钥(id_rsa.</description>
     </item>
     
   </channel>
