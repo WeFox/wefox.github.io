@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gawaingao on WeFox</title>
+    <link>http://blog.wefox.me/authors/gawaingao/</link>
+    <description>Recent content in gawaingao on WeFox</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 29 Nov 2018 17:33:19 +0800</lastBuildDate>
+    
+	<atom:link href="http://blog.wefox.me/authors/gawaingao/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ssh Login Github Problems</title>
+      <link>http://blog.wefox.me/post/ssh_login_github_problems/</link>
+      <pubDate>Thu, 29 Nov 2018 17:33:19 +0800</pubDate>
+      
+      <guid>http://blog.wefox.me/post/ssh_login_github_problems/</guid>
+      <description>用Hexo+Github搭建网站的时候，每次上传都需要输入github的用户名和密码，非常不方便。所以通过设置Github上的ssh设定来解决。但是配置过程中会有非常多的坑，这里总结几点我碰到过的问题。
+Host key verification failed错误 在Github上配置好之后需要通过命令
+ssh -T git@github  验证ssh是否设置成功，此时如有提示Host key verification failed错误，是因为.ssh目录下没有known_host文件，在.ssh目录下新建一个config文件，输入
+StrictHostKeyChecking no UserKnownHostsFile /dev/null  即可忽略known_host文件以此解决问题
+Could not open a connection to your authentication agent错误 在使用ssh-add命令时，如碰到此类错误，可执行如下命令解决：
+ssh-agent bash  Permission denied错误 Permission denied错误说明当前账户没有权限去使用/home/username/.ssh/下的pub公钥，如果此时加sudo再执行
+sudo ssh -T git@github  则会调用/root/.ssh/下的pub公钥。所以解决方法就是直接使用/root/.ssh/下的公钥
+sudo ssh-keygen -t rsa -b 4096 -C “xxx@yyy.com”  但是我们是无法进入/root/.ssh/目录的，可以将其下的id_rsa.pub拷出来打开，例如
+cp /root/.ssh/id_rsa.pub ~/.ssh/  打开后再拷出其中的内容，上述Host key verification failed错误中的config文件也可通过这种方式拷进去。以后push代码的时候，都需要加上sudo即可。</description>
+    </item>
+    
+    <item>
+      <title>在Ubuntu上用Hugo和Github创建个人博客</title>
+      <link>http://blog.wefox.me/post/create_blog_on_github_by_hugo/</link>
+      <pubDate>Thu, 29 Nov 2018 16:20:02 +0800</pubDate>
+      
+      <guid>http://blog.wefox.me/post/create_blog_on_github_by_hugo/</guid>
+      <description>前言 Hugo是使用 Go 语言开发的开源静态网站生成工具，相对于Hexo，速度快是 Hugo 的一大特点，在本地修改后，它会自动渲染。
+安装Hugo 虽然在Ubunut上可以通过sudo apt install hugo来安装，但是，强烈不推荐这样做，因为安装的版本太低，在build的时候（例如安装主题的时候）会提示很多错误。
+推荐到hugo官网下载下载符合系统的最新版本，这里我们下载hugo_xxx_Linux-64bit.deb
+下载好之后进入下载的目录(xxx代表版本号，请自行替换)
+sudo dpkg -i hugo_xxx_Linux-64bit.deb sudo apt install -f  创建博客 hugo new site blog //blog就是生成blog之后存放的文件夹  hugo会自动创建blog文件夹并生成需要的文件
+安装主题 到hugo官网上可以找到很多主题，通过Demo可以预览主题，每种主题的安装方式都会有说明，自行按需安装即可。
+安装完主题之后需在blog根目录下配置 config.toml，每个主题配置不同，这里就不一一说明了，具体可以查相关主题的配置文档。
+生成博客 直接运行 hugo server -D 就会生成博客，可以在http://localhost:1313 中查看效果
+在Github上部署 ###配置信息并关联ssh 首先，先配置Github账号信息
+git config –global user.name “your_name” git config –global user.email “your_email@youremail.com”  然后生成 SSH key 与 github 联系
+ssh-keygen -t rsa -C “your_email@youremail.com”  your_email@youremail.com 改为你的邮箱，之后会要求确认路径和输入密码，我们这使用默认的一路回车就行。成功的话会在根目录下生成.ssh文件夹，进去这个文件夹，打开id_rsa.pub，复制里面的内容。 然后登录github，如果没有就注册一个账号，登录后右上角 头像 -&amp;gt; Settings —&amp;gt; SSH nd GPG keys —&amp;gt; New SSH key。把公钥(id_rsa.</description>
+    </item>
+    
+    <item>
+      <title>在Ubuntu和Mac OS X上安装Fish</title>
+      <link>http://blog.wefox.me/post/install_fish_on_ubuntu_and_osx/</link>
+      <pubDate>Wed, 28 Nov 2018 17:44:12 +0800</pubDate>
+      
+      <guid>http://blog.wefox.me/post/install_fish_on_ubuntu_and_osx/</guid>
+      <description>最近接触了Fish这个shell，总体感觉还不错，所以花了点时间在Ubuntu和OS X上都配置了一下。
+环境： Ubuntu 18.04 LTS
+OS X 10.11
+Ubuntu 在ubuntu上，最简单的安装方法是通过最新的官方的PPA安装，具体如下：
+通过PPA安装Fish 通过下面几步来安装Fish 2.x：
+sudo apt-add-repository ppa:fish-shell/release-2 sudo apt-get update sudo apt-get install fish  安装好之后将Fish设置为默认的shell，这样每次打开终端的时候就会默认使用Fish：
+chsh -s /usr/bin/fish  现在Fish就装好了，通过在终端里输入fish就可以看到效果啦！
+给Fish安装主题 Fish有一个叫做“Oh My Fish”的框架，可以为Fish安装主题和Packages，要安装”Oh My Fish”，首先，请确保Ubuntu中已经安装了Ruby，如果还没安装，可以通过这条命令安装：
+sudo apt-get install ruby  接着通过下面这条命令就可以轻松安装了：
+curl -L http://get.oh-my.fish | fish omf help  关于”Oh My Fish”的使用，后面会细说。当然还有其他的方法可以安装Fish，例如有.deb的package来安装等等，这里就不一一列举了。
+Mac OS X 用Homebrew安装Fish 如果你已经在使用Homebrew了，可以直接安装：
+brew install fish  安装”Oh My Fish” 可以直接在终端里输入：
+curl -L http://get.</description>
+    </item>
+    
+  </channel>
+</rss>
