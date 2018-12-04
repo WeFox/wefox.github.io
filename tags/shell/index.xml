@@ -24,11 +24,10 @@ Ubuntu 在ubuntu上，最简单的安装方法是通过最新的官方的PPA安�
 sudo apt-add-repository ppa:fish-shell/release-2 sudo apt-get update sudo apt-get install fish  安装好之后将Fish设置为默认的shell，这样每次打开终端的时候就会默认使用Fish：
 chsh -s /usr/bin/fish  现在Fish就装好了，通过在终端里输入fish就可以看到效果啦！
 给Fish安装主题 Fish有一个叫做“Oh My Fish”的框架，可以为Fish安装主题和Packages，要安装”Oh My Fish”，首先，请确保Ubuntu中已经安装了Ruby，如果还没安装，可以通过这条命令安装：
-sudo apt-get install ruby  接着通过下面这条命令就可以轻松安装了：
+sudo apt-get install ruby git curl  接着通过下面这条命令就可以轻松安装了：
 curl -L http://get.oh-my.fish | fish omf help  关于”Oh My Fish”的使用，后面会细说。当然还有其他的方法可以安装Fish，例如有.deb的package来安装等等，这里就不一一列举了。
 Mac OS X 用Homebrew安装Fish 如果你已经在使用Homebrew了，可以直接安装：
-brew install fish  安装”Oh My Fish” 可以直接在终端里输入：
-curl -L http://get.</description>
+brew install fish  安装”Oh My Fish” 可以直接在终端里输入：</description>
     </item>
     
   </channel>
