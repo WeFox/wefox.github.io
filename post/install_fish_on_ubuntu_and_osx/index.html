@@ -10,14 +10,13 @@ Ubuntu 在ubuntu上，最简单的安装方法是通过最新的官方的PPA安�
 sudo apt-add-repository ppa:fish-shell/release-2 sudo apt-get update sudo apt-get install fish  安装好之后将Fish设置为默认的shell，这样每次打开终端的时候就会默认使用Fish：
 chsh -s /usr/bin/fish  现在Fish就装好了，通过在终端里输入fish就可以看到效果啦！
 给Fish安装主题 Fish有一个叫做“Oh My Fish”的框架，可以为Fish安装主题和Packages，要安装”Oh My Fish”，首先，请确保Ubuntu中已经安装了Ruby，如果还没安装，可以通过这条命令安装：
-sudo apt-get install ruby  接着通过下面这条命令就可以轻松安装了：
+sudo apt-get install ruby git curl  接着通过下面这条命令就可以轻松安装了：
 curl -L http://get.oh-my.fish | fish omf help  关于”Oh My Fish”的使用，后面会细说。当然还有其他的方法可以安装Fish，例如有.deb的package来安装等等，这里就不一一列举了。
 Mac OS X 用Homebrew安装Fish 如果你已经在使用Homebrew了，可以直接安装：
-brew install fish  安装”Oh My Fish” 可以直接在终端里输入：
-curl -L http://get.'>
+brew install fish  安装”Oh My Fish” 可以直接在终端里输入：'>
 <meta name='theme-color' content='#ffcd00'>
 
-<meta property='og:title' content='在Ubuntu和Mac OS X上安装Fish • Gawain Gao'>
+<meta property='og:title' content='在Ubuntu和Mac OS X上安装Fish • WeFox'>
 <meta property='og:description' content='最近接触了Fish这个shell，总体感觉还不错，所以花了点时间在Ubuntu和OS X上都配置了一下。
 环境： Ubuntu 18.04 LTS
 OS X 10.11
@@ -26,18 +25,17 @@ Ubuntu 在ubuntu上，最简单的安装方法是通过最新的官方的PPA安�
 sudo apt-add-repository ppa:fish-shell/release-2 sudo apt-get update sudo apt-get install fish  安装好之后将Fish设置为默认的shell，这样每次打开终端的时候就会默认使用Fish：
 chsh -s /usr/bin/fish  现在Fish就装好了，通过在终端里输入fish就可以看到效果啦！
 给Fish安装主题 Fish有一个叫做“Oh My Fish”的框架，可以为Fish安装主题和Packages，要安装”Oh My Fish”，首先，请确保Ubuntu中已经安装了Ruby，如果还没安装，可以通过这条命令安装：
-sudo apt-get install ruby  接着通过下面这条命令就可以轻松安装了：
+sudo apt-get install ruby git curl  接着通过下面这条命令就可以轻松安装了：
 curl -L http://get.oh-my.fish | fish omf help  关于”Oh My Fish”的使用，后面会细说。当然还有其他的方法可以安装Fish，例如有.deb的package来安装等等，这里就不一一列举了。
 Mac OS X 用Homebrew安装Fish 如果你已经在使用Homebrew了，可以直接安装：
-brew install fish  安装”Oh My Fish” 可以直接在终端里输入：
-curl -L http://get.'>
+brew install fish  安装”Oh My Fish” 可以直接在终端里输入：'>
 <meta property='og:url' content='http://blog.wefox.me/post/install_fish_on_ubuntu_and_osx/'>
 <meta property='og:site_name' content='WeFox'>
-<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/d538d41b031491ddc12d6c738aca845e?s=256'><meta property='article:author' content='https://facebook.com/Gawain.W.Gao'><meta property='article:section' content='post'><meta property='article:tag' content='Ubuntu'><meta property='article:tag' content='Shell'><meta property='article:published_time' content='2018-11-28T17:44:12&#43;08:00'/><meta property='article:modified_time' content='2018-11-28T17:44:12&#43;08:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:tag' content='Ubuntu'><meta property='article:tag' content='Shell'><meta property='article:published_time' content='2018-11-28T17:44:12&#43;08:00'/><meta property='article:modified_time' content='2018-11-28T17:44:12&#43;08:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.52" />
 
-  <title>在Ubuntu和Mac OS X上安装Fish • Gawain Gao</title>
+  <title>在Ubuntu和Mac OS X上安装Fish • WeFox</title>
   <link rel='canonical' href='http://blog.wefox.me/post/install_fish_on_ubuntu_and_osx/'>
   
   
@@ -165,13 +163,7 @@ curl -L http://get.'>
   <time class='entry-date' datetime='2018-11-28T17:44:12&#43;08:00'>2018, Nov 28</time>
 </span>
 
-  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
-  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
-  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
-  
-</svg>
-<span class='screen-reader-text'> by </span><a href='/authors/gawaingao'>Gawain Gao</a></span>
   
 <span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
@@ -225,7 +217,7 @@ sudo apt-get install fish
 
 <p>Fish有一个叫做“Oh My Fish”的框架，可以为Fish安装主题和Packages，要安装”Oh My Fish”，首先，请确保Ubuntu中已经安装了Ruby，如果还没安装，可以通过这条命令安装：</p>
 
-<pre><code>sudo apt-get install ruby
+<pre><code>sudo apt-get install ruby git curl
 </code></pre>
 
 <p>接着通过下面这条命令就可以轻松安装了：</p>
@@ -272,19 +264,18 @@ omf help
 
 <ul>
 <li><p>乱码或某些符号不显示<br />
-装完主题之后，可能会发现很多地方显示乱码或者不显示，例如左边的箭头，这需要安装Powerline的字体，可以在这里<a href="https://github.com/powerline/fonts" target="_blank">下载</a>，下载之后解压，并运行./install.sh即可。</p></li>
+装完主题之后，可能会发现很多地方显示乱码或者不显示，例如左边的箭头，这需要安装Powerline的字体，可以在这里<a href="https://github.com/powerline/fonts" target="_blank">下载</a>，下载之后解压，并运行./install.sh就会安装字体，安装好之后只要把终端的字体设置为任意一款Powerline字体即可。</p></li>
 
 <li><p>右侧不显示命令运行的时间和Git的状态<br />
 budspencer主题支持Vi模式，按ESC进入Normal模式后，按Space来切换”short long none”三种模式，按#来切换前面是显示状态还是显示往Git上更新了多少行的代码。如果还是不显示，可以卸载主题:</p>
 
-<pre><code>omf remove budspencer
-</code></pre>
+<p>omf remove budspencer</p></li>
+</ul>
 
 <p>再重新安装，如果还是不行，可以删除fish_prompt文件后重新安装主题：</p>
 
 <pre><code>rm ~/.config/fish/functions/fish_prompt.fish
-</code></pre></li>
-</ul>
+</code></pre>
 
 <p>另外在Ubuntu下推荐使用tilda，在Mac下推荐使用Iterm2，祝大家使用愉快！</p>
 

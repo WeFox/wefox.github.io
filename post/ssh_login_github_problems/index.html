@@ -13,7 +13,7 @@ sudo ssh-keygen -t rsa -b 4096 -C “xxx@yyy.com”  但是我们是无法进入
 cp /root/.ssh/id_rsa.pub ~/.ssh/  打开后再拷出其中的内容，上述Host key verification failed错误中的config文件也可通过这种方式拷进去。以后push代码的时候，都需要加上sudo即可。'>
 <meta name='theme-color' content='#ffcd00'>
 
-<meta property='og:title' content='Ssh Login Github Problems • Gawain Gao'>
+<meta property='og:title' content='Ssh Login Github Problems • WeFox'>
 <meta property='og:description' content='用Hexo&#43;Github搭建网站的时候，每次上传都需要输入github的用户名和密码，非常不方便。所以通过设置Github上的ssh设定来解决。但是配置过程中会有非常多的坑，这里总结几点我碰到过的问题。
 Host key verification failed错误 在Github上配置好之后需要通过命令
 ssh -T git@github  验证ssh是否设置成功，此时如有提示Host key verification failed错误，是因为.ssh目录下没有known_host文件，在.ssh目录下新建一个config文件，输入
@@ -25,11 +25,11 @@ sudo ssh-keygen -t rsa -b 4096 -C “xxx@yyy.com”  但是我们是无法进入
 cp /root/.ssh/id_rsa.pub ~/.ssh/  打开后再拷出其中的内容，上述Host key verification failed错误中的config文件也可通过这种方式拷进去。以后push代码的时候，都需要加上sudo即可。'>
 <meta property='og:url' content='http://blog.wefox.me/post/ssh_login_github_problems/'>
 <meta property='og:site_name' content='WeFox'>
-<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/d538d41b031491ddc12d6c738aca845e?s=256'><meta property='article:author' content='https://facebook.com/Gawain.W.Gao'><meta property='article:section' content='post'><meta property='article:tag' content='Ubuntu'><meta property='article:published_time' content='2018-11-29T17:33:19&#43;08:00'/><meta property='article:modified_time' content='2018-11-29T17:33:19&#43;08:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:tag' content='Ubuntu'><meta property='article:published_time' content='2018-11-29T17:33:19&#43;08:00'/><meta property='article:modified_time' content='2018-11-29T17:33:19&#43;08:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.52" />
 
-  <title>Ssh Login Github Problems • Gawain Gao</title>
+  <title>Ssh Login Github Problems • WeFox</title>
   <link rel='canonical' href='http://blog.wefox.me/post/ssh_login_github_problems/'>
   
   
@@ -157,13 +157,7 @@ cp /root/.ssh/id_rsa.pub ~/.ssh/  打开后再拷出其中的内容，上述Host
   <time class='entry-date' datetime='2018-11-29T17:33:19&#43;08:00'>2018, Nov 29</time>
 </span>
 
-  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
-  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
-  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
-  
-</svg>
-<span class='screen-reader-text'> by </span><a href='/authors/gawaingao'>Gawain Gao</a></span>
   
 <span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
