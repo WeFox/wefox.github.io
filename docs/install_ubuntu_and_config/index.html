@@ -18,7 +18,8 @@ sudo apt install gnome-tweak-tool  装完之后按下图更改
 梯子 没有梯子实在不会用电脑，因为有买国外主机自己架梯子，需要shadowsocks，之前没用UI版本的，着实不太方便，需要自己配置还要设置开机自启，有点麻烦，而这些功能UI版本都有而且会在任务栏有图标，方便切换，还有很多实用功能，果断使用UI版，具体下载地址在这里，说明还有源码可以看这里，因为下载的是AppImage格式，所以可以系统直接搜startup然后选择AppImage路径即可开机自启。
 至于浏览器端的配置简单说一下，先安装SwitchyOmega插件，Proxy设置成SOCKS5，代理服务器就127.0.0.1，代理端口是shadowsocks设置里的Local Port，自己去ss里看一下就知道了，默认1080。auto switch的Rule List Config选AutoProxy，URL填
 https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt  剩下的按自己的喜好配置吧。
-VSCode 这玩意儿也是必须的（当然，用Vim Emacs的大神们就直接跳过吧），下载地址
+VSCode 这玩意儿也是必须的（当然，用Vim Emacs的大神们就直接跳过吧）
+下载地址
 安装VMWare Workstation 15 Pro 先去VMWare官网下载一个.bundle的安装文件，然后为其添加可执行权限并安装
 sudo chmod &#43;x *.bundle sudo ./*.bundle //*均为你下载的.bundle文件的文件名  如果出现Before you can run VMware several modules must be compiled and loaded into the running kernel错误，可以先尝试该命令：'>
 <meta name='theme-color' content='#ffcd00'>
@@ -40,17 +41,18 @@ sudo apt install gnome-tweak-tool  装完之后按下图更改
 梯子 没有梯子实在不会用电脑，因为有买国外主机自己架梯子，需要shadowsocks，之前没用UI版本的，着实不太方便，需要自己配置还要设置开机自启，有点麻烦，而这些功能UI版本都有而且会在任务栏有图标，方便切换，还有很多实用功能，果断使用UI版，具体下载地址在这里，说明还有源码可以看这里，因为下载的是AppImage格式，所以可以系统直接搜startup然后选择AppImage路径即可开机自启。
 至于浏览器端的配置简单说一下，先安装SwitchyOmega插件，Proxy设置成SOCKS5，代理服务器就127.0.0.1，代理端口是shadowsocks设置里的Local Port，自己去ss里看一下就知道了，默认1080。auto switch的Rule List Config选AutoProxy，URL填
 https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt  剩下的按自己的喜好配置吧。
-VSCode 这玩意儿也是必须的（当然，用Vim Emacs的大神们就直接跳过吧），下载地址
+VSCode 这玩意儿也是必须的（当然，用Vim Emacs的大神们就直接跳过吧）
+下载地址
 安装VMWare Workstation 15 Pro 先去VMWare官网下载一个.bundle的安装文件，然后为其添加可执行权限并安装
 sudo chmod &#43;x *.bundle sudo ./*.bundle //*均为你下载的.bundle文件的文件名  如果出现Before you can run VMware several modules must be compiled and loaded into the running kernel错误，可以先尝试该命令：'>
-<meta property='og:url' content='http://blog.wefox.me/post/install_ubuntu_and_config/'>
+<meta property='og:url' content='https://blog.wefox.me/docs/install_ubuntu_and_config/'>
 <meta property='og:site_name' content='WeFox'>
-<meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:tag' content='Ubuntu'><meta property='article:published_time' content='2018-12-11T14:26:11&#43;08:00'/><meta property='article:modified_time' content='2018-12-11T14:26:11&#43;08:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='docs'><meta property='article:tag' content='Ubuntu'><meta property='article:published_time' content='2018-12-11T14:26:11&#43;08:00'/><meta property='article:modified_time' content='2018-12-11T14:26:11&#43;08:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.52" />
 
   <title>Ubuntu的安装及配置 • WeFox</title>
-  <link rel='canonical' href='http://blog.wefox.me/post/install_ubuntu_and_config/'>
+  <link rel='canonical' href='https://blog.wefox.me/docs/install_ubuntu_and_config/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -61,7 +63,7 @@ sudo chmod &#43;x *.bundle sudo ./*.bundle //*均为你下载的.bundle文件的
   
 
 </head>
-<body class='page type-post has-sidebar'>
+<body class='page type-docs has-sidebar'>
 
   <div class='site'><div id='sidebar' class='sidebar'>
   <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
@@ -139,6 +141,14 @@ sudo chmod &#43;x *.bundle sudo ./*.bundle //*均为你下载的.bundle文件的
 </span>
 </button>
     <ul><li class='item'>
+        <a href='https://blog.wefox.me'>HOME</a>
+      </li><li class='item'>
+        <a href='https://blog.wefox.me/docs'>DOCS</a>
+      </li><li class='item'>
+        <a href='https://blog.wefox.me/gossip'>GOSSIP</a>
+      </li><li class='item'>
+        <a href='https://blog.wefox.me/about'>ABOUT</a>
+      </li><li class='item'>
         <a href='https://github.com/Wefox/wefox.github.io'>Repo</a>
       </li></ul>
   </div>
@@ -269,7 +279,8 @@ One min read
 
 <h2 id="vscode">VSCode</h2>
 
-<p>这玩意儿也是必须的（当然，用Vim Emacs的大神们就直接跳过吧），<a href="https://code.visualstudio.com/docs?start=true" target="_blank">下载地址</a></p>
+<p>这玩意儿也是必须的（当然，用Vim Emacs的大神们就直接跳过吧）<br />
+<a href="https://code.visualstudio.com/docs?start=true" target="_blank">下载地址</a></p>
 
 <h2 id="安装vmware-workstation-15-pro">安装VMWare Workstation 15 Pro</h2>
 
@@ -368,7 +379,7 @@ sudo nvidia-xconfig --cool-bits=4
 
 <nav class='entry-nav'>
   <div class='container'><div class='prev-entry sep-before'>
-      <a href='/post/ssh_login_github_problems/'>
+      <a href='/docs/ssh_login_github_problems/'>
         <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="20" y1="12" x2="4" y2="12"/>

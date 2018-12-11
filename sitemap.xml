@@ -3,85 +3,104 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://blog.wefox.me/post/install_ubuntu_and_config/</loc>
+    <loc>https://blog.wefox.me/docs/install_ubuntu_and_config/</loc>
     <lastmod>2018-12-11T14:26:11+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://blog.wefox.me/post/ssh_login_github_problems/</loc>
+    <loc>https://blog.wefox.me/docs/ssh_login_github_problems/</loc>
     <lastmod>2018-11-29T17:33:19+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://blog.wefox.me/post/create_blog_on_github_by_hugo/</loc>
+    <loc>https://blog.wefox.me/docs/create_blog_on_github_by_hugo/</loc>
     <lastmod>2018-11-29T16:20:02+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://blog.wefox.me/post/install_fish_on_ubuntu_and_osx/</loc>
+    <loc>https://blog.wefox.me/docs/install_fish_on_ubuntu_and_osx/</loc>
     <lastmod>2018-11-28T17:44:12+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://blog.wefox.me/authors/</loc>
+    <loc>https://blog.wefox.me/authors/</loc>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.wefox.me/categories/</loc>
+    <loc>https://blog.wefox.me/categories/</loc>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.wefox.me/categories/computer-skill/</loc>
+    <loc>https://blog.wefox.me/categories/computer-skill/</loc>
     <lastmod>2018-11-29T16:20:02+08:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.wefox.me/tags/hugo/</loc>
-    <lastmod>2018-11-29T16:20:02+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.wefox.me/post/</loc>
+    <loc>https://blog.wefox.me/docs/</loc>
     <lastmod>2018-12-11T14:26:11+08:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.wefox.me/series/</loc>
+    <loc>https://blog.wefox.me/tags/hugo/</loc>
+    <lastmod>2018-11-29T16:20:02+08:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.wefox.me/tags/shell/</loc>
+    <loc>https://blog.wefox.me/series/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.wefox.me/tags/shell/</loc>
     <lastmod>2018-11-28T17:44:12+08:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.wefox.me/categories/system/</loc>
+    <loc>https://blog.wefox.me/categories/system/</loc>
     <lastmod>2018-12-11T14:26:11+08:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.wefox.me/tags/</loc>
+    <loc>https://blog.wefox.me/tags/</loc>
     <lastmod>2018-11-29T16:20:02+08:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.wefox.me/tags/ubuntu/</loc>
+    <loc>https://blog.wefox.me/tags/ubuntu/</loc>
     <lastmod>2018-12-11T14:26:11+08:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.wefox.me/</loc>
+    <loc>https://blog.wefox.me/</loc>
     <lastmod>2018-12-11T14:26:11+08:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
