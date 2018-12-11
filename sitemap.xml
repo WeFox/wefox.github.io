@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://blog.wefox.me/post/install_ubuntu_and_config/</loc>
+    <lastmod>2018-12-11T14:26:11+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://blog.wefox.me/post/ssh_login_github_problems/</loc>
     <lastmod>2018-11-29T17:33:19+08:00</lastmod>
   </url>
@@ -41,7 +46,7 @@
   
   <url>
     <loc>http://blog.wefox.me/post/</loc>
-    <lastmod>2018-11-29T17:33:19+08:00</lastmod>
+    <lastmod>2018-12-11T14:26:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -58,7 +63,7 @@
   
   <url>
     <loc>http://blog.wefox.me/categories/system/</loc>
-    <lastmod>2018-11-29T17:33:19+08:00</lastmod>
+    <lastmod>2018-12-11T14:26:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -70,13 +75,13 @@
   
   <url>
     <loc>http://blog.wefox.me/tags/ubuntu/</loc>
-    <lastmod>2018-11-29T17:33:19+08:00</lastmod>
+    <lastmod>2018-12-11T14:26:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://blog.wefox.me/</loc>
-    <lastmod>2018-11-29T17:33:19+08:00</lastmod>
+    <lastmod>2018-12-11T14:26:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   

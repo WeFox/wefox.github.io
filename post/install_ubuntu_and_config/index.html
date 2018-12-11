@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='(本文会持续更新，有需要的朋友可收藏或关注我的博客https://blog.wefox.me) 因为经常要安装Ubuntu的原因，每次装完都要配置，备份也不方便，所以写这篇博客记录一下。
+前言 之前安装了Btrfs的系统，并且用snapper做自动备份，刚开始用的还行，系统玩坏了就重新Rollback一下，过了一段时间之后发现系统空间老是不足，一查才发现Snapper目录动辄一两百G，本来给Ubuntu就只装在一个256G的SSD上，这哪儿受得了，果断换回Ext4。
+安装Ubuntu 这里安装的是Ubuntu 18.04LTS，具体安装步骤就不说了，上网随便找个Universal USB Installer安装即可，也不需要用啥UltraISO之类的，又要破解又要安装的。稍微说一下分区吧，本人两块硬盘，一块120G的SATA固态，一块M.2支持Nvme的256G固态，之前分区的时候是把/目录分在SATA盘下，/home分在256G的盘下，后来发现备份也不好备份，所以后来干脆就都丢在256G的SSD上，120G的SATA盘就纯粹拿来挂载用了，具体分区是启动分区100M，/swap分区16G，因为我内存是16G的，小了没用，也没必要按网上说的分内存的两倍大小给交换分区，够用就行了，然后一个/分区，一个/home分区，至于大小的话，我是/home分的大一点，其他的就不分了。
+终端 安装好Ubuntu系统后，第一件事儿当然就是终端了，我用的是Tilda &#43; Fish。安装Tilda很简单，直接
+sudo apt install tilda  即可。至于Fish的配置及效果，大家可以看这里。至于开机自启，直接系统里搜startup吧。
+中文输入法 接下来肯定是中文输入法了，每次都被输入法弄的很头疼，整了半天，终于顺手了，其实安装和配置很简单，首先：
+sudo apt install fcitx  安装输入法，接下来，打开Settings（我的Ubuntu是英文版，中文版就打开系统的“设置”，下同），里面不需要修改，不要添加中文，保持下图即可
+然后点击上图中的Manage Installed Languages，选择fcitx
+接着点击屏幕右上角的键盘，进入下图界面添加pinyin
+要添加pinyin只需点击左下角的&#43;，然后取消only show前面的勾，直接搜索pinyin即可
+交换Caps和Ctrl 本人的按键习惯是把Caps当Ctrl用，可以使用gnome-tweak-tool工具
+sudo apt install gnome-tweak-tool  装完之后按下图更改
+梯子 没有梯子实在不会用电脑，因为有买国外主机自己架梯子，需要shadowsocks，之前没用UI版本的，着实不太方便，需要自己配置还要设置开机自启，有点麻烦，而这些功能UI版本都有而且会在任务栏有图标，方便切换，还有很多实用功能，果断使用UI版，具体下载地址在这里，说明还有源码可以看这里，因为下载的是AppImage格式，所以可以系统直接搜startup然后选择AppImage路径即可开机自启。
+至于浏览器端的配置简单说一下，先安装SwitchyOmega插件，Proxy设置成SOCKS5，代理服务器就127.0.0.1，代理端口是shadowsocks设置里的Local Port，自己去ss里看一下就知道了，默认1080。
+auto switch的Rule List Config选AutoProxy，URL填
+https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt  剩下的按自己的喜好配置吧。
+VSCode 这玩意儿也是必须的（当然，用Vim Emacs的大神们就直接跳过吧），下载地址
+安装VMWare Workstation 15 Pro 先去VMWare官网下载一个.bundle的安装文件，然后为其添加可执行权限并安装
+sudo chmod &#43;x *.bundle sudo ./*.bundle //*均为你下载的.bundle文件的文件名  如果出现Before you can run VMware several modules must be compiled and loaded into the running kernel错误，可以先尝试该命令：'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='Install_ubuntu_and_config • WeFox'>
+<meta property='og:description' content='(本文会持续更新，有需要的朋友可收藏或关注我的博客https://blog.wefox.me) 因为经常要安装Ubuntu的原因，每次装完都要配置，备份也不方便，所以写这篇博客记录一下。
+前言 之前安装了Btrfs的系统，并且用snapper做自动备份，刚开始用的还行，系统玩坏了就重新Rollback一下，过了一段时间之后发现系统空间老是不足，一查才发现Snapper目录动辄一两百G，本来给Ubuntu就只装在一个256G的SSD上，这哪儿受得了，果断换回Ext4。
+安装Ubuntu 这里安装的是Ubuntu 18.04LTS，具体安装步骤就不说了，上网随便找个Universal USB Installer安装即可，也不需要用啥UltraISO之类的，又要破解又要安装的。稍微说一下分区吧，本人两块硬盘，一块120G的SATA固态，一块M.2支持Nvme的256G固态，之前分区的时候是把/目录分在SATA盘下，/home分在256G的盘下，后来发现备份也不好备份，所以后来干脆就都丢在256G的SSD上，120G的SATA盘就纯粹拿来挂载用了，具体分区是启动分区100M，/swap分区16G，因为我内存是16G的，小了没用，也没必要按网上说的分内存的两倍大小给交换分区，够用就行了，然后一个/分区，一个/home分区，至于大小的话，我是/home分的大一点，其他的就不分了。
+终端 安装好Ubuntu系统后，第一件事儿当然就是终端了，我用的是Tilda &#43; Fish。安装Tilda很简单，直接
+sudo apt install tilda  即可。至于Fish的配置及效果，大家可以看这里。至于开机自启，直接系统里搜startup吧。
+中文输入法 接下来肯定是中文输入法了，每次都被输入法弄的很头疼，整了半天，终于顺手了，其实安装和配置很简单，首先：
+sudo apt install fcitx  安装输入法，接下来，打开Settings（我的Ubuntu是英文版，中文版就打开系统的“设置”，下同），里面不需要修改，不要添加中文，保持下图即可
+然后点击上图中的Manage Installed Languages，选择fcitx
+接着点击屏幕右上角的键盘，进入下图界面添加pinyin
+要添加pinyin只需点击左下角的&#43;，然后取消only show前面的勾，直接搜索pinyin即可
+交换Caps和Ctrl 本人的按键习惯是把Caps当Ctrl用，可以使用gnome-tweak-tool工具
+sudo apt install gnome-tweak-tool  装完之后按下图更改
+梯子 没有梯子实在不会用电脑，因为有买国外主机自己架梯子，需要shadowsocks，之前没用UI版本的，着实不太方便，需要自己配置还要设置开机自启，有点麻烦，而这些功能UI版本都有而且会在任务栏有图标，方便切换，还有很多实用功能，果断使用UI版，具体下载地址在这里，说明还有源码可以看这里，因为下载的是AppImage格式，所以可以系统直接搜startup然后选择AppImage路径即可开机自启。
+至于浏览器端的配置简单说一下，先安装SwitchyOmega插件，Proxy设置成SOCKS5，代理服务器就127.0.0.1，代理端口是shadowsocks设置里的Local Port，自己去ss里看一下就知道了，默认1080。
+auto switch的Rule List Config选AutoProxy，URL填
+https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt  剩下的按自己的喜好配置吧。
+VSCode 这玩意儿也是必须的（当然，用Vim Emacs的大神们就直接跳过吧），下载地址
+安装VMWare Workstation 15 Pro 先去VMWare官网下载一个.bundle的安装文件，然后为其添加可执行权限并安装
+sudo chmod &#43;x *.bundle sudo ./*.bundle //*均为你下载的.bundle文件的文件名  如果出现Before you can run VMware several modules must be compiled and loaded into the running kernel错误，可以先尝试该命令：'>
+<meta property='og:url' content='http://blog.wefox.me/post/install_ubuntu_and_config/'>
+<meta property='og:site_name' content='WeFox'>
+<meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:tag' content='Ubuntu'><meta property='article:published_time' content='2018-12-11T14:26:11&#43;08:00'/><meta property='article:modified_time' content='2018-12-11T14:26:11&#43;08:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.52" />
+
+  <title>Install_ubuntu_and_config • WeFox</title>
+  <link rel='canonical' href='http://blog.wefox.me/post/install_ubuntu_and_config/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.4a10984a.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+  
+
+</head>
+<body class='page type-post has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='/images/logo.png'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+    WeFox
+    </h2>
+    <div class='desc'>
+    Just Do It
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'>Search</h4>
+  </header>
+
+  <form action='/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
+
+</section>
+<section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Tags</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/tags/hugo/' style='font-size:1em'>Hugo</a>
+      </li><li>
+        <a href='/tags/shell/' style='font-size:1em'>Shell</a>
+      </li><li>
+        <a href='/tags/ubuntu/' style='font-size:2em'>Ubuntu</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='https://github.com/Wefox/wefox.github.io'>Repo</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>WeFox</p><p class='desc site-desc'>Just Do It</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Install_ubuntu_and_config</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2018-12-11T14:26:11&#43;08:00'>2018, Dec 11</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+One min read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  
+
+<p>(本文会持续更新，有需要的朋友可收藏或关注我的博客<a href="https://blog.wefox.me" target="_blank">https://blog.wefox.me</a>)
+因为经常要安装Ubuntu的原因，每次装完都要配置，备份也不方便，所以写这篇博客记录一下。</p>
+
+<h2 id="前言">前言</h2>
+
+<p>之前安装了Btrfs的系统，并且用snapper做自动备份，刚开始用的还行，系统玩坏了就重新Rollback一下，过了一段时间之后发现系统空间老是不足，一查才发现Snapper目录动辄一两百G，本来给Ubuntu就只装在一个256G的SSD上，这哪儿受得了，果断换回Ext4。</p>
+
+<h2 id="安装ubuntu">安装Ubuntu</h2>
+
+<p>这里安装的是Ubuntu 18.04LTS，具体安装步骤就不说了，上网随便找个Universal USB Installer安装即可，也不需要用啥UltraISO之类的，又要破解又要安装的。稍微说一下分区吧，本人两块硬盘，一块120G的SATA固态，一块M.2支持Nvme的256G固态，之前分区的时候是把<code>/</code>目录分在SATA盘下，<code>/home</code>分在256G的盘下，后来发现备份也不好备份，所以后来干脆就都丢在256G的SSD上，120G的SATA盘就纯粹拿来挂载用了，具体分区是启动分区100M，<code>/swap</code>分区16G，因为我内存是16G的，小了没用，也没必要按网上说的分内存的两倍大小给交换分区，够用就行了，然后一个<code>/</code>分区，一个<code>/home</code>分区，至于大小的话，我是<code>/home</code>分的大一点，其他的就不分了。</p>
+
+<h2 id="终端">终端</h2>
+
+<p>安装好Ubuntu系统后，第一件事儿当然就是终端了，我用的是<code>Tilda + Fish</code>。安装Tilda很简单，直接</p>
+
+<pre><code>sudo apt install tilda
+</code></pre>
+
+<p>即可。至于Fish的配置及效果，大家可以看<a href="https://blog.wefox.me/post/install_fish_on_ubuntu_and_osx/" target="_blank">这里</a>。至于开机自启，直接系统里搜<code>startup</code>吧。</p>
+
+<h2 id="中文输入法">中文输入法</h2>
+
+<p>接下来肯定是中文输入法了，每次都被输入法弄的很头疼，整了半天，终于顺手了，其实安装和配置很简单，首先：</p>
+
+<pre><code>sudo apt install fcitx
+</code></pre>
+
+<p>安装输入法，接下来，打开<code>Settings</code>（我的Ubuntu是英文版，中文版就打开系统的“设置”，下同），里面不需要修改，<strong>不要添加中文</strong>，保持下图即可</p>
+
+<p><img src="https://raw.githubusercontent.com/Wefox/wefox.github.io/master/post/img/install_ubuntu_1.png" alt="Img" /></p>
+
+<p>然后点击上图中的<code>Manage Installed Languages</code>，选择<code>fcitx</code></p>
+
+<p><img src="https://raw.githubusercontent.com/Wefox/wefox.github.io/master/post/img/install_ubuntu_2.png" alt="Img" /></p>
+
+<p>接着点击屏幕右上角的键盘，进入下图界面添加<code>pinyin</code></p>
+
+<p><img src="https://raw.githubusercontent.com/Wefox/wefox.github.io/master/post/img/install_ubuntu_3.png" alt="Img" /></p>
+
+<p>要添加<code>pinyin</code>只需点击左下角的<code>+</code>，然后取消<code>only show</code>前面的勾，直接搜索<code>pinyin</code>即可</p>
+
+<p><img src="https://raw.githubusercontent.com/Wefox/wefox.github.io/master/post/img/install_ubuntu_4.png" alt="Img" /></p>
+
+<h2 id="交换caps和ctrl">交换Caps和Ctrl</h2>
+
+<p>本人的按键习惯是把Caps当Ctrl用，可以使用gnome-tweak-tool工具</p>
+
+<pre><code>sudo apt install gnome-tweak-tool
+</code></pre>
+
+<p>装完之后按下图更改</p>
+
+<p><img src="https://raw.githubusercontent.com/Wefox/wefox.github.io/master/post/img/install_ubuntu_5.png" alt="Img" /></p>
+
+<h2 id="梯子">梯子</h2>
+
+<p>没有梯子实在不会用电脑，因为有买<a href="https://bwh8.net/clientarea.php?action=products" target="_blank">国外主机</a>自己架梯子，需要shadowsocks，之前没用UI版本的，着实不太方便，需要自己配置还要设置开机自启，有点麻烦，而这些功能UI版本都有而且会在任务栏有图标，方便切换，还有很多实用功能，果断使用UI版，具体下载地址在<a href="https://github.com/shadowsocks/shadowsocks-qt5/releases" target="_blank">这里</a>，说明还有源码可以看<a href="https://github.com/shadowsocks/shadowsocks-qt5/wiki/Installation" target="_blank">这里</a>，因为下载的是AppImage格式，所以可以系统直接搜<code>startup</code>然后选择AppImage路径即可开机自启。</p>
+
+<p>至于浏览器端的配置简单说一下，先安装SwitchyOmega插件，Proxy设置成<code>SOCKS5</code>，代理服务器就<code>127.0.0.1</code>，代理端口是shadowsocks设置里的<code>Local Port</code>，自己去ss里看一下就知道了，默认1080。<br />
+<code>auto switch</code>的<code>Rule List Config</code>选<code>AutoProxy</code>，URL填</p>
+
+<pre><code>https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
+</code></pre>
+
+<p>剩下的按自己的喜好配置吧。</p>
+
+<h2 id="vscode">VSCode</h2>
+
+<p>这玩意儿也是必须的（当然，用Vim Emacs的大神们就直接跳过吧），<a href="https://code.visualstudio.com/docs?start=true" target="_blank">下载地址</a></p>
+
+<h2 id="安装vmware-workstation-15-pro">安装VMWare Workstation 15 Pro</h2>
+
+<p>先去VMWare<a href="https://my.vmware.com/web/vmware/downloads" target="_blank">官网</a>下载一个.bundle的安装文件，然后为其添加可执行权限并安装</p>
+
+<pre><code>sudo chmod +x *.bundle
+sudo ./*.bundle         //*均为你下载的.bundle文件的文件名
+</code></pre>
+
+<p>如果出现<code>Before you can run VMware several modules must be compiled and loaded into the running kernel</code>错误，可以先尝试该命令：</p>
+
+<pre><code>sudo vmware-modconfig --console --install-all
+</code></pre>
+
+<p>这个命令会安装VMware全部的模块，或者可以尝试</p>
+
+<pre><code>sudo apt-get install build-essential linux-headers-$(uname -r) open-vm-dkms
+sudo ln -s /usr/src/linux-headers-$(uname -r)/include/generated/uapi/linux/version.h /usr/src/linux-headers-$(uname -r)/include/linux/version.h
+</code></pre>
+
+<p>然后再执行：</p>
+
+<pre><code>sudo vmware-config-tools.pl
+</code></pre>
+
+<p>最后再执行一遍</p>
+
+<pre><code>sudo vmware-modconfig --console --install-all
+</code></pre>
+
+<p>或者再安装.bundle文件应该就可以了。</p>
+
+<h2 id="更改nvidia显卡风扇转速">更改Nvidia显卡风扇转速</h2>
+
+<p>在<code>/etc/X11/xorg.conf</code>文件中添加<code>Option &quot;Coolbits&quot; &quot;4&quot;</code>，如下</p>
+
+<pre><code>Section &quot;Device&quot; 
+Identifier &quot;Device0&quot; 
+Driver &quot;nvidia&quot; 
+VendorName &quot;NVIDIA Corporation&quot; 
+Option &quot;NoLogo&quot; &quot;True&quot; 
+Option &quot;Coolbits&quot; &quot;4&quot; 
+EndSection
+</code></pre>
+
+<p>不用每个字段都一样，只要有<code>Option &quot;Coolbits&quot; &quot;4&quot;</code>这行就可以了，然后重启，在</p>
+
+<pre><code>nvidia-settings
+</code></pre>
+
+<p>里就可以更改风扇转速了</p>
+
+<p><img src="https://raw.githubusercontent.com/Wefox/wefox.github.io/master/post/img/install_ubuntu_6.png" alt="Img" /></p>
+
+<p>或者</p>
+
+<pre><code>nvidia-settings -a &quot;[gpu:0]/GPUFanControlState=1&quot; -a &quot;[fan:0]/GPUTargetFanSpeed=100&quot;
+</code></pre>
+
+<p>如果没有<code>/etc/X11/xorg.conf</code>该文件，这时需要</p>
+
+<pre><code>sudo nvidia-xconfig
+sudo nvidia-xconfig --cool-bits=4
+</code></pre>
+
+<p>然后再查看是否添加了<code>Option &quot;Coolbits&quot; &quot;4&quot;</code>这行，没有的话重复上述步骤手动添加一下。</p>
+
+<h2 id="reference">Reference</h2>
+
+<p><a href="https://blog.csdn.net/zwliang98/article/details/80851022" target="_blank">https://blog.csdn.net/zwliang98/article/details/80851022</a><br />
+<a href="https://blog.csdn.net/jiandanjinxin/article/details/75045232" target="_blank">https://blog.csdn.net/jiandanjinxin/article/details/75045232</a></p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='categories'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+<span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/system/'>System</a></div>
+<div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/ubuntu/'>Ubuntu</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/post/ssh_login_github_problems/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>Ssh Login Github Problems</a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/wefox' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://facebook.com/Gawain.W.Gao' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Facebook account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://twitter.com/MunifTanjim' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Twitter account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://instagram.com/MunifTanjim' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Instagram account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:gawasta@outlook.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://codepen.io/MunifTanjim' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Codepen account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/>
+  <line x1="12" y1="22" x2="12" y2="15.5"/>
+  <polyline points="22 8.5 12 15.5 2 8.5"/>
+  <polyline points="2 15.5 12 8.5 22 15.5"/>
+  <line x1="12" y1="2" x2="12" y2="8.5"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://gitlab.com/MunifTanjim' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Gitlab account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://linkedin.com/in/muniftanjim' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Linkedin account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+  <rect x="2" y="9" width="4" height="12"/>
+  <circle cx="4" cy="4" r="2"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://t.me/MunifTanjim' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Telegram account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="m 22.05,1.577 c -0.393,-0.016 -0.784,0.08 -1.117,0.235 -0.484,0.186 -4.92,1.902 -9.41,3.64 C 9.263,6.325 7.005,7.198 5.267,7.867 3.53,8.537 2.222,9.035 2.153,9.059 c -0.46,0.16 -1.082,0.362 -1.61,0.984 -0.79581202,1.058365 0.21077405,1.964825 1.004,2.499 1.76,0.564 3.58,1.102 5.087,1.608 0.556,1.96 1.09,3.927 1.618,5.89 0.174,0.394 0.553,0.54 0.944,0.544 l -0.002,0.02 c 0,0 0.307,0.03 0.606,-0.042 0.3,-0.07 0.677,-0.244 1.02,-0.565 0.377,-0.354 1.4,-1.36 1.98,-1.928 l 4.37,3.226 0.035,0.02 c 0,0 0.484,0.34 1.192,0.388 0.354,0.024 0.82,-0.044 1.22,-0.337 0.403,-0.294 0.67,-0.767 0.795,-1.307 0.374,-1.63 2.853,-13.427 3.276,-15.38 L 23.676,4.725 C 23.972,3.625 23.863,2.617 23.18,2.02 22.838,1.723 22.444,1.593 22.05,1.576 Z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://scholar.google.com/citations?user=qc6CJjYAAAAJ' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Google_scholar account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21.328 2.002v9.2M8.695 7.85c.014-.787-.11-2.236.28-2.89.623-1.045.856-1.39 1.797-1.989 1.953-.988 4.296.692 4.296.692.803.564 1.672 2.1 1.672 2.1l1.368-1.824-5.444-1.754-3.515 1.34L6.08 7.681m9.109 3.42s.65-.633 1.168-1.085c.461-.402.516-.714.6-.914.18-.426.268-.909.268-1.446 0-.7-.131-1.274-.388-1.735-.031-.053 0 0-.097-.157l4.588-3.762H10.32L3.672 7.85l5.023-.024c.23 1.237.619 1.575 1.019 2.222.744.719 1.13 1.194 2.215 1.194.254 0 2.6-.057 2.842-.09 0 0 .546 1.199-.133 1.71-.41.31.576 1.304.576 1.304s-5.577.831-6.523 1.427a4.13 4.13 0 0 0-1.306 1.277 3.034 3.034 0 0 0-.493 1.665c0 .502.106.955.32 1.357.214.403.493.733.84.99.345.258.744.473 1.194.649.45.174.896.297 1.342.367a8.348 8.348 0 0 0 3.41-.166 7.754 7.754 0 0 0 1.964-.807 4.28 4.28 0 0 0 1.49-1.443c.38-.609.57-1.292.57-2.049 0-.574-.116-1.096-.347-1.57a3.755 3.755 0 0 0-.847-1.164c-.335-.302-2.19-1.837-2.19-1.837"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://www.youtube.com/channel/UCT-U0rNerYxItGcuoPX-WYA' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Youtube account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2017-2018 Wefoe.me </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__public_path__='\/assets\/js\/'</script>
+
+<script src='/assets/js/main.fae8ed32.js'></script><script src='/js/custom.js'></script>
+
+</body>
+
+</html>
+
