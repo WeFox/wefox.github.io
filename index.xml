@@ -5,10 +5,25 @@
     <link>https://blog.wefox.me/</link>
     <description>Recent content on WeFox</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 11 Dec 2018 14:26:11 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 12 Dec 2018 16:30:07 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.wefox.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo SEO搜索引擎优化</title>
+      <link>https://blog.wefox.me/docs/hugo_seo/</link>
+      <pubDate>Wed, 12 Dec 2018 16:30:07 +0800</pubDate>
+      
+      <guid>https://blog.wefox.me/docs/hugo_seo/</guid>
+      <description>前言 为了让网站能更好的被搜索引擎收录，就需要进行搜索引擎优化，这里只针对Google。
+站点内容优化 修改hugo根目录下的config.toml文件：
+[params.info] subtitle = &amp;quot;XXXXXXXX&amp;quot; keywords = &amp;quot;XXX,XXX&amp;quot; description = &amp;quot;XXXXXXXXXXXXXXXXXXXXXXX&amp;quot; title404 = &amp;quot;XXXXXXXXXXXXX&amp;quot;  具体内容请自行替换
+修改模板中的head.html文件如 themes/××××/layouts/partials/head/head.html，如果有meta.html则直接在此文件中加入
+&amp;lt;meta name=&#39;keywords&#39; content=&amp;quot;{{ delimit .Keywords &amp;quot;, &amp;quot; }}&amp;quot;&amp;gt; &amp;lt;meta property=&amp;quot;og:title&amp;quot; content=&amp;quot;{{ .Title }} - {{ .Site.Title }}&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;apple-mobile-web-app-title&amp;quot; content=&amp;quot;{{ .Title }} - {{ .Site.Title }}&amp;quot;&amp;gt; {{ $realDescription := or .Description .Site.Params.description}} &amp;lt;meta name=&amp;quot;description&amp;quot; content=&amp;quot;{{ $realDescription }}&amp;quot;&amp;gt; &amp;lt;meta property=&amp;quot;og:description&amp;quot; content=&amp;quot;{{ $realDescription }}&amp;quot;&amp;gt;  这三段分别是对keyword，title和description的优化。
+添加页面信息 首先确保每个页面一定都要设置有title，description，最好还有keywords：
+keywords: - mysite - mysite keyword - Another useful keyword title: My Homepage description : mysite description  Google搜索优化 sitemap.</description>
+    </item>
     
     <item>
       <title>Ubuntu的安装及配置</title>

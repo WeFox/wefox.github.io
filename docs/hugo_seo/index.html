@@ -22,27 +22,31 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 
 <meta name='theme-color' content='#ffcd00'>
-<meta name='keywords' content="">
+<meta name='keywords' content="WeFox, 唯狐博客, Hugo, SEO, 搜索引擎优化">
 
-<meta property="og:title" content="Computer Skill - WeFox">
-<meta name="apple-mobile-web-app-title" content="Computer Skill - WeFox">
+<meta property="og:title" content="Hugo SEO搜索引擎优化 - WeFox">
+<meta name="apple-mobile-web-app-title" content="Hugo SEO搜索引擎优化 - WeFox">
 
 
 <meta name="description" content="">
 <meta property="og:description" content="">
 
-<meta property='og:title' content='Category: Computer Skill • WeFox'>
-<meta property='og:description' content='Focus AI ML and DL'>
-<meta property='og:url' content='https://blog.wefox.me/categories/computer-skill/'>
+<meta property='og:title' content='Hugo SEO搜索引擎优化 • WeFox'>
+<meta property='og:description' content='前言 为了让网站能更好的被搜索引擎收录，就需要进行搜索引擎优化，这里只针对Google。
+站点内容优化 修改hugo根目录下的config.toml文件：
+[params.info] subtitle = &quot;XXXXXXXX&quot; keywords = &quot;XXX,XXX&quot; description = &quot;XXXXXXXXXXXXXXXXXXXXXXX&quot; title404 = &quot;XXXXXXXXXXXXX&quot;  具体内容请自行替换
+修改模板中的head.html文件如 themes/××××/layouts/partials/head/head.html，如果有meta.html则直接在此文件中加入
+&lt;meta name=&#39;keywords&#39; content=&quot;{{ delimit .Keywords &quot;, &quot; }}&quot;&gt; &lt;meta property=&quot;og:title&quot; content=&quot;{{ .Title }} - {{ .Site.Title }}&quot;&gt; &lt;meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;{{ .Title }} - {{ .Site.Title }}&quot;&gt; {{ $realDescription := or .Description .Site.Params.description}} &lt;meta name=&quot;description&quot; content=&quot;{{ $realDescription }}&quot;&gt; &lt;meta property=&quot;og:description&quot; content=&quot;{{ $realDescription }}&quot;&gt;  这三段分别是对keyword，title和description的优化。
+添加页面信息 首先确保每个页面一定都要设置有title，description，最好还有keywords：
+keywords: - mysite - mysite keyword - Another useful keyword title: My Homepage description : mysite description  Google搜索优化 sitemap.'>
+<meta property='og:url' content='https://blog.wefox.me/docs/hugo_seo/'>
 <meta property='og:site_name' content='WeFox'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content='2018-12-12T16:30:07&#43;08:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='docs'><meta property='article:tag' content='Ubuntu'><meta property='article:tag' content='Hugo'><meta property='article:published_time' content='2018-12-12T16:30:07&#43;08:00'/><meta property='article:modified_time' content='2018-12-12T16:30:07&#43;08:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.52" />
   
-  <title>Computer Skill - WeFox</title>
-  <link rel='canonical' href='https://blog.wefox.me/categories/computer-skill/'>
-  
-  <link href="https://blog.wefox.me/categories/computer-skill/index.xml" rel="alternate" type="application/rss+xml" title="WeFox" />
+  <title>Hugo SEO搜索引擎优化 - WeFox</title>
+  <link rel='canonical' href='https://blog.wefox.me/docs/hugo_seo/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -52,7 +56,7 @@
 
   
 
-</head><body class='taxonomy type-categories taxonomy-category has-sidebar'>
+</head><body class='page type-docs has-sidebar'>
 
   <div class='site'><div id='sidebar' class='sidebar'>
   <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
@@ -155,44 +159,190 @@
       <main id='content'>
 
 
-<header class='header'>
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'><span class='taxonomy-name'>Category: </span>Computer Skill</h1>
-
+      <h1 class='title'>Hugo SEO搜索引擎优化</h1>
       
 
     </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2018-12-12T16:30:07&#43;08:00'>2018, Dec 12</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+One min read
+</span>
+
+
+</div>
+
+
   </div>
 </header>
 
-
-
-
-<div class='container list-container'>
-  <ul class='list'>
-    
-      <li class='item'>
-  <div class='meta'>
-    <span>
-  <span class='screen-reader-text'>Posted on </span>
-  <time datetime='2018-11-29T16:20:02&#43;08:00'>2018, Nov 29</time>
-</span>
-
-  </div>
-  <header class='item-header'>
-    <h3 class='item-title'>
-      <a href='/docs/create_blog_on_github_by_hugo/'>在Ubuntu上用Hugo&#43;Github创建个人博客</a>
-    </h3>
-  </header>
-</li>
-
-    
-  </ul>
-
+  
   
 
+  <div class='container entry-content'>
+  
+
+<h2 id="前言">前言</h2>
+
+<p>为了让网站能更好的被搜索引擎收录，就需要进行搜索引擎优化，这里只针对Google。</p>
+
+<h2 id="站点内容优化">站点内容优化</h2>
+
+<p>修改hugo根目录下的<code>config.toml</code>文件：</p>
+
+<pre><code>[params.info]
+subtitle = &quot;XXXXXXXX&quot;
+keywords = &quot;XXX,XXX&quot;
+description = &quot;XXXXXXXXXXXXXXXXXXXXXXX&quot;
+title404 = &quot;XXXXXXXXXXXXX&quot;
+</code></pre>
+
+<p>具体内容请自行替换</p>
+
+<p>修改模板中的<code>head.html</code>文件如 themes/××××/layouts/partials/head/head.html，如果有<code>meta.html</code>则直接在此文件中加入</p>
+
+<pre><code>&lt;meta name='keywords' content=&quot;{{ delimit .Keywords &quot;, &quot; }}&quot;&gt;
+
+&lt;meta property=&quot;og:title&quot; content=&quot;{{ .Title }} - {{ .Site.Title }}&quot;&gt;
+&lt;meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;{{ .Title }} - {{ .Site.Title }}&quot;&gt;
+
+{{ $realDescription := or .Description .Site.Params.description}}
+&lt;meta name=&quot;description&quot; content=&quot;{{ $realDescription }}&quot;&gt;
+&lt;meta property=&quot;og:description&quot; content=&quot;{{ $realDescription }}&quot;&gt;
+</code></pre>
+
+<p>这三段分别是对<code>keyword</code>，<code>title</code>和<code>description</code>的优化。</p>
+
+<h2 id="添加页面信息">添加页面信息</h2>
+
+<p>首先确保每个页面一定都要设置有<code>title</code>，<code>description</code>，最好还有<code>keywords</code>：</p>
+
+<pre><code>keywords:
+- mysite
+- mysite keyword
+- Another useful keyword
+title: My Homepage
+description : mysite description
+</code></pre>
+
+<h2 id="google搜索优化">Google搜索优化</h2>
+
+<h4 id="sitemap-xml配置">sitemap.xml配置</h4>
+
+<p>先登录<a href="https://search.google.com/search-console/sitemaps?resource_id=https%3A%2F%2Fblog.wefox.me%2F&amp;hl=en" target="_blank">Google Search Console</a>，上传sitemap.xml，一般该文件会自动在hugo的根目录下生成，如果没有的话，可以自己在<code>layouts</code>或者<code>theme/layouts/_default</code>下创建一个，并输入：</p>
+
+<pre><code>&lt;urlset xmlns=&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot;
+xmlns:xhtml=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+{{ range .Data.Pages }}
+&lt;url&gt;
+    &lt;loc&gt;{{ .Permalink }}&lt;/loc&gt;{{ if not .Lastmod.IsZero }}
+    &lt;lastmod&gt;{{ safeHTML ( .Lastmod.Format &quot;2006-01-02T15:04:05-07:00&quot; ) }}&lt;/lastmod&gt;{{ end }}{{ with .Sitemap.ChangeFreq }}
+    &lt;changefreq&gt;{{ . }}&lt;/changefreq&gt;{{ end }}{{ if ge .Sitemap.Priority 0.0 }}
+    &lt;priority&gt;{{ .Sitemap.Priority }}&lt;/priority&gt;{{ end }}{{ if .IsTranslated }}{{ range .Translations }}
+    &lt;xhtml:link
+                rel=&quot;alternate&quot;
+                hreflang=&quot;{{ .Lang }}&quot;
+                href=&quot;{{ .Permalink }}&quot;
+                /&gt;{{ end }}
+    &lt;xhtml:link
+                rel=&quot;alternate&quot;
+                hreflang=&quot;{{ .Lang }}&quot;
+                href=&quot;{{ .Permalink }}&quot;
+                /&gt;{{ end }}
+&lt;/url&gt;
+{{ end }}
+&lt;/urlset&gt;
+</code></pre>
+
+<p>然后在终端用<code>hugo</code>命令后并上传网站会在网站根目录下出现。</p>
+
+<h4 id="robots-txt配置">robots.txt配置</h4>
+
+<p>在旧版的<a href="https://www.google.com/webmasters/tools/robots-testing-tool?utm_source=support.google.com/webmasters/&amp;utm_medium=referral&amp;utm_campaign=%206062598" target="_blank">Google Search Console</a>里可以测试<code>robots.txt</code>，在<code>robots.txt</code>的末尾添加<code>sitemap</code></p>
+
+<pre><code>User-agent: *
+Allow: /
+Allow: /docs/
+Allow: /gossip/
+Allow: /about/
+Disallow: /assets/
+
+Sitemap: https://blog.wefox.me/sitemap.xml
+</code></pre>
+
+<p>一般hugo或者主题都会自动生成<code>robots.txt</code>，默认基本都是在根目录下。</p>
+
+<h4 id="google-analytics">Google Analytics</h4>
+
+<p>具体操作直接看这个<a href="https://support.google.com/analytics/answer/1008015?hl=en" target="_blank">官方文档</a>吧，设置好之后可以在只需登录一下自己的博客，然后在<code>Real-Time</code>里看下是否有登录信息就可知道是否绑定成功。</p>
+
+<h2 id="reference">Reference</h2>
+
+<p><a href="https://skyao.io/learning-hugo/installation/seo.html" target="_blank">https://skyao.io/learning-hugo/installation/seo.html</a>
+<a href="https://jimmysong.io/hugo-handbook/steps/seo.html" target="_blank">https://jimmysong.io/hugo-handbook/steps/seo.html</a></p>
+
 </div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='categories'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+<span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/web/'>Web</a></div>
+<div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/ubuntu/'>Ubuntu</a>, <a class='tag' href='/tags/hugo/'>Hugo</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/docs/install_ubuntu_and_config/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>Ubuntu的安装及配置</a>
+    </div></div>
+</nav>
+
+
+
 
       </main>
 

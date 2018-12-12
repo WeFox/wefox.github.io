@@ -3,6 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://blog.wefox.me/docs/hugo_seo/</loc>
+    <lastmod>2018-12-12T16:30:07+08:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.wefox.me/docs/install_ubuntu_and_config/</loc>
     <lastmod>2018-12-11T14:26:11+08:00</lastmod>
     <changefreq>always</changefreq>
@@ -51,14 +58,14 @@
   
   <url>
     <loc>https://blog.wefox.me/docs/</loc>
-    <lastmod>2018-12-11T14:26:11+08:00</lastmod>
+    <lastmod>2018-12-12T16:30:07+08:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.wefox.me/tags/hugo/</loc>
-    <lastmod>2018-11-29T16:20:02+08:00</lastmod>
+    <lastmod>2018-12-12T16:30:07+08:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0</priority>
   </url>
@@ -85,21 +92,28 @@
   
   <url>
     <loc>https://blog.wefox.me/tags/</loc>
-    <lastmod>2018-11-29T16:20:02+08:00</lastmod>
+    <lastmod>2018-12-12T16:30:07+08:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.wefox.me/tags/ubuntu/</loc>
-    <lastmod>2018-12-11T14:26:11+08:00</lastmod>
+    <lastmod>2018-12-12T16:30:07+08:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.wefox.me/</loc>
-    <lastmod>2018-12-11T14:26:11+08:00</lastmod>
+    <lastmod>2018-12-12T16:30:07+08:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.wefox.me/categories/web/</loc>
+    <lastmod>2018-12-12T16:30:07+08:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0</priority>
   </url>
