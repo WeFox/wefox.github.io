@@ -56,7 +56,7 @@ cp /root/.ssh/id_rsa.pub ~/.ssh/  打开后再拷出其中的内容，上述Host
     </item>
     
     <item>
-      <title>在Ubuntu上用Hugo和Github创建个人博客</title>
+      <title>在Ubuntu上用Hugo&#43;Github创建个人博客</title>
       <link>https://blog.wefox.me/docs/create_blog_on_github_by_hugo/</link>
       <pubDate>Thu, 29 Nov 2018 16:20:02 +0800</pubDate>
       
