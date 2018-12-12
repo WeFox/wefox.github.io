@@ -3,6 +3,6 @@ Allow: /
 Allow: /docs/
 Allow: /gossip/
 Allow: /about/ 
-Disallow: 
+Disallow: /assets/
 
 Sitemap: http://blog.wefox.me/sitemap.xml
