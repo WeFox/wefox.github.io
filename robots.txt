@@ -1,2 +1,8 @@
 User-agent: *
-Disallow:
+Allow: /
+Allow: /docs/
+Allow: /gossip/
+Allow: /about/ 
+Disallow: 
+
+Sitemap: http://blog.wefox.me/sitemap.xml
