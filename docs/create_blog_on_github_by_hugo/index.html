@@ -43,14 +43,14 @@ sudo dpkg -i hugo_xxx_Linux-64bit.deb sudo apt install -f  创建博客 hugo new
 在Github上部署 ###配置信息并关联ssh 首先，先配置Github账号信息
 git config –global user.name “your_name” git config –global user.email “your_email@youremail.com”  然后生成 SSH key 与 github 联系
 ssh-keygen -t rsa -C “your_email@youremail.com”  your_email@youremail.com 改为你的邮箱，之后会要求确认路径和输入密码，我们这使用默认的一路回车就行。成功的话会在根目录下生成.ssh文件夹，进去这个文件夹，打开id_rsa.pub，复制里面的内容。 然后登录github，如果没有就注册一个账号，登录后右上角 头像 -&gt; Settings —&gt; SSH nd GPG keys —&gt; New SSH key。把公钥(id_rsa.'>
-<meta property='og:url' content='https://wefox.me/docs/create_blog_on_github_by_hugo/'>
+<meta property='og:url' content='https://blog.wefox.me/docs/create_blog_on_github_by_hugo/'>
 <meta property='og:site_name' content='WeFox'>
 <meta property='og:type' content='article'><meta property='article:section' content='docs'><meta property='article:tag' content='Ubuntu'><meta property='article:tag' content='Hugo'><meta property='article:published_time' content='2018-11-29T16:20:02&#43;08:00'/><meta property='article:modified_time' content='2018-11-29T16:20:02&#43;08:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.52" />
   
   <title>在Ubuntu上用Hugo&#43;Github创建个人博客 - WeFox</title>
-  <link rel='canonical' href='https://wefox.me/docs/create_blog_on_github_by_hugo/'>
+  <link rel='canonical' href='https://blog.wefox.me/docs/create_blog_on_github_by_hugo/'>
   
   
   <link rel='icon' href='/favicon.ico'>

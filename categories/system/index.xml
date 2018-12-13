@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>System on WeFox</title>
-    <link>https://wefox.me/categories/system/</link>
+    <link>https://blog.wefox.me/categories/system/</link>
     <description>Recent content in System on WeFox</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 11 Dec 2018 14:26:11 +0800</lastBuildDate>
     
-	<atom:link href="https://wefox.me/categories/system/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.wefox.me/categories/system/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ubuntu的安装及配置</title>
-      <link>https://wefox.me/docs/install_ubuntu_and_config/</link>
+      <link>https://blog.wefox.me/docs/install_ubuntu_and_config/</link>
       <pubDate>Tue, 11 Dec 2018 14:26:11 +0800</pubDate>
       
-      <guid>https://wefox.me/docs/install_ubuntu_and_config/</guid>
+      <guid>https://blog.wefox.me/docs/install_ubuntu_and_config/</guid>
       <description>(本文会持续更新，有需要的朋友可收藏或关注我的博客https://blog.wefox.me)
 因为经常要安装Ubuntu的原因，每次装完都要配置，备份也不方便，所以写这篇博客记录一下。
 前言 之前安装了Btrfs的系统，并且用snapper做自动备份，刚开始用的还行，系统玩坏了就重新Rollback一下，过了一段时间之后发现系统空间老是不足，一查才发现Snapper目录动辄一两百G，本来给Ubuntu就只装在一个256G的SSD上，这哪儿受得了，果断换回Ext4。
@@ -40,10 +40,10 @@ sudo chmod +x *.bundle sudo ./*.bundle //*均为你下载的.bundle文件的文�
     
     <item>
       <title>SSH Login Github Problems</title>
-      <link>https://wefox.me/docs/ssh_login_github_problems/</link>
+      <link>https://blog.wefox.me/docs/ssh_login_github_problems/</link>
       <pubDate>Thu, 29 Nov 2018 17:33:19 +0800</pubDate>
       
-      <guid>https://wefox.me/docs/ssh_login_github_problems/</guid>
+      <guid>https://blog.wefox.me/docs/ssh_login_github_problems/</guid>
       <description>用Hexo+Github搭建网站的时候，每次上传都需要输入github的用户名和密码，非常不方便。所以通过设置Github上的ssh设定来解决。但是配置过程中会有非常多的坑，这里总结几点我碰到过的问题。
 Host key verification failed错误 在Github上配置好之后需要通过命令
 ssh -T git@github  验证ssh是否设置成功，此时如有提示Host key verification failed错误，是因为.ssh目录下没有known_host文件，在.ssh目录下新建一个config文件，输入
@@ -57,10 +57,10 @@ cp /root/.ssh/id_rsa.pub ~/.ssh/  打开后再拷出其中的内容，上述Host
     
     <item>
       <title>在Ubuntu和Mac OS X上安装Fish</title>
-      <link>https://wefox.me/docs/install_fish_on_ubuntu_and_osx/</link>
+      <link>https://blog.wefox.me/docs/install_fish_on_ubuntu_and_osx/</link>
       <pubDate>Wed, 28 Nov 2018 17:44:12 +0800</pubDate>
       
-      <guid>https://wefox.me/docs/install_fish_on_ubuntu_and_osx/</guid>
+      <guid>https://blog.wefox.me/docs/install_fish_on_ubuntu_and_osx/</guid>
       <description>最近接触了Fish这个shell，总体感觉还不错，所以花了点时间在Ubuntu和OS X上都配置了一下。
 环境： Ubuntu 18.04 LTS
 OS X 10.11

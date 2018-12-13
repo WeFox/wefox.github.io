@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on WeFox</title>
-    <link>https://wefox.me/categories/</link>
+    <link>https://blog.wefox.me/categories/</link>
     <description>Recent content in Categories on WeFox</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="https://wefox.me/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.wefox.me/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Computer Skill</title>
-      <link>https://wefox.me/categories/computer-skill/</link>
+      <link>https://blog.wefox.me/categories/computer-skill/</link>
       <pubDate>Thu, 29 Nov 2018 16:20:02 +0800</pubDate>
       
-      <guid>https://wefox.me/categories/computer-skill/</guid>
+      <guid>https://blog.wefox.me/categories/computer-skill/</guid>
       <description></description>
     </item>
     
     <item>
       <title>System</title>
-      <link>https://wefox.me/categories/system/</link>
+      <link>https://blog.wefox.me/categories/system/</link>
       <pubDate>Tue, 11 Dec 2018 14:26:11 +0800</pubDate>
       
-      <guid>https://wefox.me/categories/system/</guid>
+      <guid>https://blog.wefox.me/categories/system/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Web</title>
-      <link>https://wefox.me/categories/web/</link>
+      <link>https://blog.wefox.me/categories/web/</link>
       <pubDate>Wed, 12 Dec 2018 16:30:07 +0800</pubDate>
       
-      <guid>https://wefox.me/categories/web/</guid>
+      <guid>https://blog.wefox.me/categories/web/</guid>
       <description></description>
     </item>
     

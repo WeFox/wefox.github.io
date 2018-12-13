@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Shell on WeFox</title>
-    <link>https://wefox.me/tags/shell/</link>
+    <link>https://blog.wefox.me/tags/shell/</link>
     <description>Recent content in Shell on WeFox</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 28 Nov 2018 17:44:12 +0800</lastBuildDate>
     
-	<atom:link href="https://wefox.me/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.wefox.me/tags/shell/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>在Ubuntu和Mac OS X上安装Fish</title>
-      <link>https://wefox.me/docs/install_fish_on_ubuntu_and_osx/</link>
+      <link>https://blog.wefox.me/docs/install_fish_on_ubuntu_and_osx/</link>
       <pubDate>Wed, 28 Nov 2018 17:44:12 +0800</pubDate>
       
-      <guid>https://wefox.me/docs/install_fish_on_ubuntu_and_osx/</guid>
+      <guid>https://blog.wefox.me/docs/install_fish_on_ubuntu_and_osx/</guid>
       <description>最近接触了Fish这个shell，总体感觉还不错，所以花了点时间在Ubuntu和OS X上都配置了一下。
 环境： Ubuntu 18.04 LTS
 OS X 10.11
