@@ -32,7 +32,7 @@
 <meta property="og:description" content="">
 
 <meta property='og:title' content='Ubuntu的安装及配置 • WeFox'>
-<meta property='og:description' content='(本文会持续更新，有需要的朋友可收藏或关注我的博客https://blog.wefox.me)
+<meta property='og:description' content='(本文会持续更新，有需要的朋友可收藏或关注我的博客https://wefox.me)
 因为经常要安装Ubuntu的原因，每次装完都要配置，备份也不方便，所以写这篇博客记录一下。
 前言 之前安装了Btrfs的系统，并且用snapper做自动备份，刚开始用的还行，系统玩坏了就重新Rollback一下，过了一段时间之后发现系统空间老是不足，一查才发现Snapper目录动辄一两百G，本来给Ubuntu就只装在一个256G的SSD上，这哪儿受得了，果断换回Ext4。
 安装Ubuntu 这里安装的是Ubuntu 18.04LTS，具体安装步骤就不说了，上网随便找个Universal USB Installer安装即可，也不需要用啥UltraISO之类的，又要破解又要安装的。稍微说一下分区吧，本人两块硬盘，一块120G的SATA固态，一块M.2支持Nvme的256G固态，之前分区的时候是把/目录分在SATA盘下，/home分在256G的盘下，后来发现备份也不好备份，所以后来干脆就都丢在256G的SSD上，120G的SATA盘就纯粹拿来挂载用了，具体分区是启动分区100M，/swap分区16G，因为我内存是16G的，小了没用，也没必要按网上说的分内存的两倍大小给交换分区，够用就行了，然后一个/分区，一个/home分区，至于大小的话，我是/home分的大一点，其他的就不分了。
@@ -215,7 +215,7 @@ One min read
   <div class='container entry-content'>
   
 
-<p>(本文会持续更新，有需要的朋友可收藏或关注我的博客<a href="https://blog.wefox.me" target="_blank">https://blog.wefox.me</a>)</p>
+<p>(本文会持续更新，有需要的朋友可收藏或关注我的博客<a href="https://wefox.me" target="_blank">https://wefox.me</a>)</p>
 
 <p>因为经常要安装Ubuntu的原因，每次装完都要配置，备份也不方便，所以写这篇博客记录一下。</p>
 
@@ -234,7 +234,7 @@ One min read
 <pre><code>sudo apt install tilda
 </code></pre>
 
-<p>即可。至于Fish的配置及效果，大家可以看<a href="https://blog.wefox.me/post/install_fish_on_ubuntu_and_osx/" target="_blank">这里</a>。至于开机自启，直接系统里搜<code>startup</code>吧。</p>
+<p>即可。至于Fish的配置及效果，大家可以看<a href="https://wefox.me/post/install_fish_on_ubuntu_and_osx/" target="_blank">这里</a>。至于开机自启，直接系统里搜<code>startup</code>吧。</p>
 
 <h2 id="中文输入法">中文输入法</h2>
 
