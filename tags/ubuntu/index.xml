@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ubuntu on WeFox</title>
-    <link>https://blog.wefox.me/tags/ubuntu/</link>
+    <link>https://wefox.me/tags/ubuntu/</link>
     <description>Recent content in Ubuntu on WeFox</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 12 Dec 2018 16:30:07 +0800</lastBuildDate>
     
-	<atom:link href="https://blog.wefox.me/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://wefox.me/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hugo SEO搜索引擎优化</title>
-      <link>https://blog.wefox.me/docs/hugo_seo/</link>
+      <link>https://wefox.me/docs/hugo_seo/</link>
       <pubDate>Wed, 12 Dec 2018 16:30:07 +0800</pubDate>
       
-      <guid>https://blog.wefox.me/docs/hugo_seo/</guid>
+      <guid>https://wefox.me/docs/hugo_seo/</guid>
       <description>前言 为了让网站能更好的被搜索引擎收录，就需要进行搜索引擎优化，这里只针对Google。
 站点内容优化 修改hugo根目录下的config.toml文件：
 [params.info] subtitle = &amp;quot;XXXXXXXX&amp;quot; keywords = &amp;quot;XXX,XXX&amp;quot; description = &amp;quot;XXXXXXXXXXXXXXXXXXXXXXX&amp;quot; title404 = &amp;quot;XXXXXXXXXXXXX&amp;quot;  具体内容请自行替换
@@ -27,10 +27,10 @@ keywords: - mysite - mysite keyword - Another useful keyword title: My Homepage 
     
     <item>
       <title>Ubuntu的安装及配置</title>
-      <link>https://blog.wefox.me/docs/install_ubuntu_and_config/</link>
+      <link>https://wefox.me/docs/install_ubuntu_and_config/</link>
       <pubDate>Tue, 11 Dec 2018 14:26:11 +0800</pubDate>
       
-      <guid>https://blog.wefox.me/docs/install_ubuntu_and_config/</guid>
+      <guid>https://wefox.me/docs/install_ubuntu_and_config/</guid>
       <description>(本文会持续更新，有需要的朋友可收藏或关注我的博客https://blog.wefox.me)
 因为经常要安装Ubuntu的原因，每次装完都要配置，备份也不方便，所以写这篇博客记录一下。
 前言 之前安装了Btrfs的系统，并且用snapper做自动备份，刚开始用的还行，系统玩坏了就重新Rollback一下，过了一段时间之后发现系统空间老是不足，一查才发现Snapper目录动辄一两百G，本来给Ubuntu就只装在一个256G的SSD上，这哪儿受得了，果断换回Ext4。
@@ -55,10 +55,10 @@ sudo chmod +x *.bundle sudo ./*.bundle //*均为你下载的.bundle文件的文�
     
     <item>
       <title>SSH Login Github Problems</title>
-      <link>https://blog.wefox.me/docs/ssh_login_github_problems/</link>
+      <link>https://wefox.me/docs/ssh_login_github_problems/</link>
       <pubDate>Thu, 29 Nov 2018 17:33:19 +0800</pubDate>
       
-      <guid>https://blog.wefox.me/docs/ssh_login_github_problems/</guid>
+      <guid>https://wefox.me/docs/ssh_login_github_problems/</guid>
       <description>用Hexo+Github搭建网站的时候，每次上传都需要输入github的用户名和密码，非常不方便。所以通过设置Github上的ssh设定来解决。但是配置过程中会有非常多的坑，这里总结几点我碰到过的问题。
 Host key verification failed错误 在Github上配置好之后需要通过命令
 ssh -T git@github  验证ssh是否设置成功，此时如有提示Host key verification failed错误，是因为.ssh目录下没有known_host文件，在.ssh目录下新建一个config文件，输入
@@ -72,10 +72,10 @@ cp /root/.ssh/id_rsa.pub ~/.ssh/  打开后再拷出其中的内容，上述Host
     
     <item>
       <title>在Ubuntu上用Hugo&#43;Github创建个人博客</title>
-      <link>https://blog.wefox.me/docs/create_blog_on_github_by_hugo/</link>
+      <link>https://wefox.me/docs/create_blog_on_github_by_hugo/</link>
       <pubDate>Thu, 29 Nov 2018 16:20:02 +0800</pubDate>
       
-      <guid>https://blog.wefox.me/docs/create_blog_on_github_by_hugo/</guid>
+      <guid>https://wefox.me/docs/create_blog_on_github_by_hugo/</guid>
       <description>前言 Hugo是使用 Go 语言开发的开源静态网站生成工具，相对于Hexo，速度快是 Hugo 的一大特点，在本地修改后，它会自动渲染。
 安装Hugo 虽然在Ubunut上可以通过sudo apt install hugo来安装，但是，强烈不推荐这样做，因为安装的版本太低，在build的时候（例如安装主题的时候）会提示很多错误。
 推荐到hugo官网下载下载符合系统的最新版本，这里我们下载hugo_xxx_Linux-64bit.deb
@@ -91,10 +91,10 @@ ssh-keygen -t rsa -C “your_email@youremail.com”  your_email@youremail.com �
     
     <item>
       <title>在Ubuntu和Mac OS X上安装Fish</title>
-      <link>https://blog.wefox.me/docs/install_fish_on_ubuntu_and_osx/</link>
+      <link>https://wefox.me/docs/install_fish_on_ubuntu_and_osx/</link>
       <pubDate>Wed, 28 Nov 2018 17:44:12 +0800</pubDate>
       
-      <guid>https://blog.wefox.me/docs/install_fish_on_ubuntu_and_osx/</guid>
+      <guid>https://wefox.me/docs/install_fish_on_ubuntu_and_osx/</guid>
       <description>最近接触了Fish这个shell，总体感觉还不错，所以花了点时间在Ubuntu和OS X上都配置了一下。
 环境： Ubuntu 18.04 LTS
 OS X 10.11

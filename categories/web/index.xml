@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web on WeFox</title>
-    <link>https://blog.wefox.me/categories/web/</link>
+    <link>https://wefox.me/categories/web/</link>
     <description>Recent content in Web on WeFox</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 12 Dec 2018 16:30:07 +0800</lastBuildDate>
     
-	<atom:link href="https://blog.wefox.me/categories/web/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://wefox.me/categories/web/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hugo SEO搜索引擎优化</title>
-      <link>https://blog.wefox.me/docs/hugo_seo/</link>
+      <link>https://wefox.me/docs/hugo_seo/</link>
       <pubDate>Wed, 12 Dec 2018 16:30:07 +0800</pubDate>
       
-      <guid>https://blog.wefox.me/docs/hugo_seo/</guid>
+      <guid>https://wefox.me/docs/hugo_seo/</guid>
       <description>前言 为了让网站能更好的被搜索引擎收录，就需要进行搜索引擎优化，这里只针对Google。
 站点内容优化 修改hugo根目录下的config.toml文件：
 [params.info] subtitle = &amp;quot;XXXXXXXX&amp;quot; keywords = &amp;quot;XXX,XXX&amp;quot; description = &amp;quot;XXXXXXXXXXXXXXXXXXXXXXX&amp;quot; title404 = &amp;quot;XXXXXXXXXXXXX&amp;quot;  具体内容请自行替换
