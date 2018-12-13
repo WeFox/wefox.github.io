@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on WeFox</title>
-    <link>https://blog.wefox.me/tags/hugo/</link>
+    <link>https://wefox.me/tags/hugo/</link>
     <description>Recent content in Hugo on WeFox</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 12 Dec 2018 16:30:07 +0800</lastBuildDate>
     
-	<atom:link href="https://blog.wefox.me/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://wefox.me/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hugo SEO搜索引擎优化</title>
-      <link>https://blog.wefox.me/docs/hugo_seo/</link>
+      <link>https://wefox.me/docs/hugo_seo/</link>
       <pubDate>Wed, 12 Dec 2018 16:30:07 +0800</pubDate>
       
-      <guid>https://blog.wefox.me/docs/hugo_seo/</guid>
+      <guid>https://wefox.me/docs/hugo_seo/</guid>
       <description>前言 为了让网站能更好的被搜索引擎收录，就需要进行搜索引擎优化，这里只针对Google。
 站点内容优化 修改hugo根目录下的config.toml文件：
 [params.info] subtitle = &amp;quot;XXXXXXXX&amp;quot; keywords = &amp;quot;XXX,XXX&amp;quot; description = &amp;quot;XXXXXXXXXXXXXXXXXXXXXXX&amp;quot; title404 = &amp;quot;XXXXXXXXXXXXX&amp;quot;  具体内容请自行替换
@@ -27,10 +27,10 @@ keywords: - mysite - mysite keyword - Another useful keyword title: My Homepage 
     
     <item>
       <title>在Ubuntu上用Hugo&#43;Github创建个人博客</title>
-      <link>https://blog.wefox.me/docs/create_blog_on_github_by_hugo/</link>
+      <link>https://wefox.me/docs/create_blog_on_github_by_hugo/</link>
       <pubDate>Thu, 29 Nov 2018 16:20:02 +0800</pubDate>
       
-      <guid>https://blog.wefox.me/docs/create_blog_on_github_by_hugo/</guid>
+      <guid>https://wefox.me/docs/create_blog_on_github_by_hugo/</guid>
       <description>前言 Hugo是使用 Go 语言开发的开源静态网站生成工具，相对于Hexo，速度快是 Hugo 的一大特点，在本地修改后，它会自动渲染。
 安装Hugo 虽然在Ubunut上可以通过sudo apt install hugo来安装，但是，强烈不推荐这样做，因为安装的版本太低，在build的时候（例如安装主题的时候）会提示很多错误。
 推荐到hugo官网下载下载符合系统的最新版本，这里我们下载hugo_xxx_Linux-64bit.deb
