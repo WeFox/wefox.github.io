@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://wefox.me/en/authors/</loc>
+    <changefreq>always</changefreq>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://wefox.me/authors/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://wefox.me/en/authors/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://wefox.me/en/categories/</loc>
+    <changefreq>always</changefreq>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://wefox.me/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://wefox.me/en/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://wefox.me/en/series/</loc>
+    <changefreq>always</changefreq>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://wefox.me/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://wefox.me/en/series/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://wefox.me/en/tags/</loc>
+    <changefreq>always</changefreq>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://wefox.me/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://wefox.me/en/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://wefox.me/en/</loc>
+    <changefreq>always</changefreq>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://wefox.me/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://wefox.me/en/"
+                />
+  </url>
+  
+</urlset>
